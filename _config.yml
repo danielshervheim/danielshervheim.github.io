@@ -1,0 +1,19 @@
+# Site config
+baseurl: ""
+
+# User config
+author: "Daniel Shervheim"
+description: "A Personal Portfolio."
+email: "danielshervheim@gmail.com"
+
+# User collections
+collections:
+  projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: page

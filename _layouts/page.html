@@ -1,0 +1,25 @@
+---
+---
+<!-- empty front matter to force jekyll processing. -->
+
+<!doctype html>
+
+<html lang="en">
+<head>
+	{% include head.html %}
+</head>
+
+<body>
+	{% include header.html %}
+
+	<main>
+		<div class="single_column">
+			<article>
+				{{ content }}
+			</article>
+		</div>
+	</main>
+
+	{% include footer.html %}
+</body>
+</html>
