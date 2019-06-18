@@ -17,6 +17,7 @@ I was responsible for the following contributions:
 - Cleaning up the models and UV maps in blender.
 - Programming in Unity (mainly the map and audio systems).
 - Optimization for mobile VR in Unity.
+<br/>
 
 <a target="blank" href="https://play.google.com/store/apps/details?id=com.aisos.virtualmisls" class="button">
   <img src="/assets/img/buttons/playstore_button.png" description="Get it on Google Play"/>
