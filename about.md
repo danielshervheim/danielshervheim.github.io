@@ -6,17 +6,18 @@ permalink: /about
 ![me](/assets/img/about/me.jpg)
 
 <br/>
-## Hey there
+
+## Hey there,
 
 I'm Dan!
 
-I currently study and work at the University of Minnesota. I’m a senior studying computer science with a focus on graphics programming. I work as an undergraduate teaching assistant, as well as at the [AISOS lab](http://aisos.umn.edu/) at the U.
+I’m studying computer science with a focus on graphics programming at the [University of Minnesota](https://www.cs.umn.edu/). I work as a teaching assistant and at [AISOS](http://aisos.umn.edu/), both at the U.
 
-I plan to graduate in December 2019, and intend to continue into graduate school at the U.
+I plan to graduate in December 2019, and intend to continue at the U to pursue my Masters degree in computer science.
 
-In my spare time I like to read, draw, make 3D models, program games, and spend time with my family.
+In my spare time I like to read, draw, make 3D models, program games, spend time with my family and explore!
 
-My resume is available to download [here](https://docs.google.com/document/d/1pAoeWMVmRG-uOplchmDD8qh1SfPuwfCJ26882EFppic/edit?usp=sharing).
+My resume is available [here](https://docs.google.com/document/d/1pAoeWMVmRG-uOplchmDD8qh1SfPuwfCJ26882EFppic/edit?usp=sharing).
 
 <br/>
 ## Want to get in touch?
