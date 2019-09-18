@@ -10,10 +10,17 @@ email: "danielshervheim@gmail.com"
 collections:
   projects:
     output: true
+  hidden_projects:
+    output: true
 
 defaults:
   - scope:
       path: ""
       type: "projects"
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: "hidden_projects"
     values:
       layout: page
