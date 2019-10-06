@@ -74,6 +74,14 @@ img {
   width: 100%;
 }
 
+iframe {
+    width:100% !important;
+}
+
+video {
+    width: 100% !important;
+}
+
 ul {
   list-style-type: disc;
   margin-left: 2em;
