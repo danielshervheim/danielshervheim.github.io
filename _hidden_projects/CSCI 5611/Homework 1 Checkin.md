@@ -1,7 +1,7 @@
 ---
 title: Test
 image: /assets/img/placeholder.jpg
-permalink: /hidden_projects/5611/homework-1
+permalink: /hidden_projects/csci-5611/homework-1-checkin
 ---
 
 

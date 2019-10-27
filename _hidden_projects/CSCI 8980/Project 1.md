@@ -1,7 +1,7 @@
 ---
 title: CSCI 8980 Project 1
 image: /assets/img/placeholder.jpg
-permalink: /hidden_projects/csci-8980-project-1
+permalink: /hidden_projects/csci-8980/project-1
 ---
 
 ### Asteroid Run
@@ -102,7 +102,7 @@ The feature I found myself missing the most from a more full-featured game engin
 
 A dedicated scripting system would have made develpoment easier as well. I'm used to Unity's MonoBehaviour system, where each "object" in your game can have multiple components attached to it (all derived from MonoBehavior), and the components themselves just override certain methods (e.g. `Start()` and`Update()`). Given more time, I would have liked to implement something like this in Processing.
 
-I also missed having more control over the rendering. Processing is good for simple geometric shapes, but any complex 3D models, materials, or shaders are more involved. 
+I also missed having more control over the rendering. Processing is good for simple geometric shapes, but any complex 3D models, materials, or shaders are more involved.
 
 
 

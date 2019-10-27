@@ -1,7 +1,7 @@
 ---
 title: CSCI 8980 Project 2
 image: /assets/img/placeholder.jpg
-permalink: /hidden_projects/csci-8980-project-2
+permalink: /hidden_projects/csci-8980/project-2
 ---
 
 ### Rendering Large Scenes
@@ -33,7 +33,7 @@ Of the three techniques, I found that the LOD system provided the most substanti
 
 Some work is required to take advantage of the acceleration techniques. The LOD system especially requires proper asset preparation. Each 3D model must have a corresponding low-poly version in order to take advantage of the LOD system. The low-poly version must be modelled by an artist, or created by decimating the original model. Both options are non-trivial.
 
-The techniques themselves also incur additional costs each frame. The list of models must be sorted, and the model bounds must be recalculated by matrix multiplication each frame. While there are costs associated with each technique, the performance gained more than covers them. Overall, the three techniques provided an impressive performance boost. On complex scenes (~4 fps) I saw gains of up to 20-30 fps with the acceleration techniques enabled. 
+The techniques themselves also incur additional costs each frame. The list of models must be sorted, and the model bounds must be recalculated by matrix multiplication each frame. While there are costs associated with each technique, the performance gained more than covers them. Overall, the three techniques provided an impressive performance boost. On complex scenes (~4 fps) I saw gains of up to 20-30 fps with the acceleration techniques enabled.
 
 #### 1. LOD
 
@@ -46,7 +46,7 @@ void draw(model)
 	if model.children > 0
 		draw(model.children[i])
 	end
-	
+
 	render model
 end
 ```
@@ -59,11 +59,11 @@ void draw(model)
 		draw (model.lodChild)
 		return
 	end
-	
+
 	if model.children > 0
 		draw(model.children[i])
 	end
-	
+
 	render model
 end
 ```
@@ -82,17 +82,17 @@ Because objects in the scene may be arbitrarily translated, rotated, and/or scal
 ```
 render(model, frustum)
 	corners = model.bounds.getCorners()
-	
+
 	foreach corner in corners
 		corner = model.transform * corner
 	end
-	
+
 	AABB boundsWS = new AABB
-	
+
 	foreach corner in corners
 		boundsWS.extendBy(corner)
 	end
-	
+
 	if frustum intersects boundsWS
 		render model
 	else
