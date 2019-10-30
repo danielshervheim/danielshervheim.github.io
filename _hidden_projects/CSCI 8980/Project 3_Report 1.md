@@ -53,7 +53,7 @@ Our goal in animating the pieces was for them to appear as natural as possible. 
 
 When a piece moves, its position and rotation are animated. We also experimented with animating the scale for a squash-and-stretch effect, but decided against it. We felt it looked unnatural with the solid wooden pieces.
 
-We update the piece X and Z (horizontal) positions separately from the Y (vertical) position. On the XZ plane, the piece position is just a linear interpolation between the start and goal positions. We then remap the `t` parameter into a [triangle wave]() (going from 0 → 1 → 0 over the original 0 → 1 range). The remapped `t` is then raised to a power to smooth it out, resulting in a parabolic arc-esque function.
+We update the piece X and Z (horizontal) positions separately from the Y (vertical) position. On the XZ plane, the piece position is just a linear interpolation between the start and goal positions. We then remap the `t` parameter into a [triangle wave](https://www.desmos.com/calculator/85wzbqowpx) (going from 0 → 1 → 0 over the original 0 → 1 range). The remapped `t` is then raised to a power to smooth it out, resulting in a parabolic arc-esque function.
 
 ```Lua
 -- Move the piece along the XZ plane.
