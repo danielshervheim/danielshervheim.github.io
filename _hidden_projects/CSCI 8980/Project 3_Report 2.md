@@ -31,7 +31,7 @@ In this section we go in-depth in the process of programming the game logic.
 
 Everything in Lua is represented as a table. There is no concept of classes. It would have been inefficient to implement unique tables for each piece, especially since certain pieces share identical attributes. Fortunately Lua provides a function which allowed us to create copies of existing tables. With this in mind, we created a "template table" within a module for each of our piece types, and made copies of it for all of the pieces of that type. The example pawn module is listed below.
 
-```Lua
+```lua
 -- pawn.lua
 
 local Pawn = {
@@ -59,7 +59,7 @@ return Pawn
 
 We could then instantiate pawn instances by calling the following methods.
 
-```Lua
+```lua
 -- main.lua
 Pawn = require "scenes/Chess/scripts/pieces/pawn"
 
@@ -102,7 +102,7 @@ To check if a king is safe or in checkmate, it is insufficient to only check the
 
 We maintain a lookup table of all the pieces indexed by a member variable from the board. We can get the piece on the board at `(x, z)` by the following code snippet:
 
-```Lua
+```lua
 local index = board.chessboard[x][z].pieceIndex
 local piece = pieces[index]
 ```
@@ -111,7 +111,7 @@ Where `board` is the current board game and `chessboard` is a 8-by-8 table that 
 
 Using this lookup table, we can do simulation and restoration in an efficient way:
 
-```Lua
+```lua
 -- Update the simulated piece's logical position.
 piece.x = newX
 piece.z = newZ
@@ -134,7 +134,7 @@ After each move we call `isSafe(king)` on the opposing team's king. If the king 
 
 In our chess game, each player has a specific amount of time allotted to them. If a player's clock runs out then they have lost the game. We created two separate clocks for each player and maintain variables storing the amount of time left. Every frame, we subtract the time since the last frame (`dt`) to countdown the timer.
 
-```Lua
+```lua
 local currentTimer = {
 	min = 5,
 	sec = 0,

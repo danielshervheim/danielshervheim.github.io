@@ -20,14 +20,14 @@ The cursor follows the mouse around and acts as an indicator of which tile the p
 
 The cursor has two properties associated with it: (1) the current position and (2) the target position. The target position is updated when the mouse moves over any tile. The current position is updated each frame as a blend of the current position and the target position. The effect is that the cursor moves towards the target position, decelerating as it gets closer.
 
-```Lua
+```lua
 local blend = clamp(dt * cursorFollowSpeed, 0, 1)
 cursorPos = (1-blend)*cursorPos + (blend)*targetCursorPos
 ```
 
 Equivalent properties exist for the cursor scale. The target scale is set to 0.75 if the mouse is over a **highlighted** piece or tile, and 1.0 otherwise. The current scale is updated each frame as a blend of the current scale and the target scale.
 
-```Lua
+```lua
 local blend = clamp(dt * cursorScaleSpeed, 0, 1)
 cursorScale = (1-blend)*cursorScale + (blend)*targetCursorScale
 ```
@@ -39,7 +39,7 @@ cursorScale = (1-blend)*cursorScale + (blend)*targetCursorScale
 
 Each playable piece and tile has a small highlighted circle that appears under it. The highlights indicate to the player which piece can be played, and where. When the highlight is created, its scale is set to 0 initially and scaled up until it reaches 1. We used an exponential scale function over a linear one because it was more interesting visually.
 
-```Lua
+```lua
 -- easeOutExponential = 1 - 2^(-8*x)
 highlightScale = easeOutExponential(t)
 ```
@@ -55,7 +55,7 @@ When a piece moves, its position and rotation are animated. We also experimented
 
 We update the piece X and Z (horizontal) positions separately from the Y (vertical) position. On the XZ plane, the piece position is just a linear interpolation between the start and goal positions. We then remap the `t` parameter into a [triangle wave](https://www.desmos.com/calculator/85wzbqowpx) (going from 0 → 1 → 0 over the original 0 → 1 range). The remapped `t` is then raised to a power to smooth it out, resulting in a parabolic arc-esque function.
 
-```Lua
+```lua
 -- Move the piece along the XZ plane.
 piecePosXZ = (1-t)*startPiecePosXZ + (t)*goalPiecePosXZ
 
@@ -66,7 +66,7 @@ piecePosY = triangleT^(1.5)
 
 We also update the rotation as well. There are two components to the rotation. The first is a rocking motion perpendicular to the movement direction. This gives the effect that the piece is being picked up.
 
-```Lua
+```lua
 -- Calculate the exact angle of the rock based on t.
 local pieceAngle = rockingAmplitude * sin(2*math.pi*t)
 
@@ -76,7 +76,7 @@ rotateModel(pieceID, pieceAngle, -dirZ, 0, -dirX)
 
 The second component is a rotation towards the movement direction. This gives the effect that the piece is moving itself towards its goal.
 
-```Lua
+```lua
 -- Calculate the angle of the movement direction.
 local targetAngle = math.atan2(-dirX, -dirZ)
 
