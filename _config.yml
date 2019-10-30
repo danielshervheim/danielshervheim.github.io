@@ -9,6 +9,9 @@ email: "danielshervheim@gmail.com"
 # Syntax highlighting
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # User collections
 collections:
