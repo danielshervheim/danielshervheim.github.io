@@ -4,6 +4,8 @@ image: /assets/img/placeholder.jpg
 permalink: /hidden_projects/csci-8980/project-3/report-2
 ---
 
+[← Back to Project 3](/hidden_projects/csci-8980/project-3)
+
 # Game Development
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CiJlOMVO5M8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

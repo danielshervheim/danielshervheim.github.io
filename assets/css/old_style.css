@@ -1,8 +1,12 @@
 /* VARIABLES */
 :root {
   /* SITEWIDE styles */
+  --text-color: #222222;
+  --accent-color: yellow;
+  --background-color: white;
   --contentWidth: 1000px;
   --articleWidth: 600px;
+  --paragraphBreakHeight: 20px;
 
   /* MASONRY variables */
   --gutter: 20px;
@@ -16,12 +20,57 @@
 
 /* GLOBAL */
 body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+
   width: var(--contentWidth);
   max-width: calc(100% - 2*var(--gutter));
   margin:0px auto;
 }
 
-/* img {
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rakkas', cursive;
+}
+
+h1 {
+  font-size:36px;
+  line-height: 72px;
+}
+
+h2 {
+  font-size:32px;
+  line-height: 64px;
+}
+
+h3 {
+  font-size:28px;
+  line-height: 56px;
+}
+
+h4 {
+  font-size:24px;
+  line-height:48px;
+}
+
+h5 {
+  font-size:20px;
+  line-height:40px;
+}
+
+h6 {
+  font-size:16px;
+  line-height:32px;
+}
+
+img {
   width: 100%;
 }
 
@@ -31,7 +80,38 @@ iframe {
 
 video {
     width: 100% !important;
-} */
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 2em;
+  margin-bottom: var(--paragraphBreakHeight);
+}
+
+ul ul {
+  list-style-type: circle;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 2em;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+::-moz-selection, ::selection {
+  background: var(--accent-color);
+}
+
+em {
+  font-style:italic;
+}
+
+strong {
+  font-weight: bold;
+}
 
 
 
@@ -44,27 +124,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.site-title h1 {
-  border-bottom: 0px;
-}
-
-.site-title a,
-.site-nav a {
-  color: #24292e;
-  transition: color 0.15s;
-}
-
-.site-nav a:hover {
-  color: #0365d6;
-  transition: color 0.15s;
-}
-
-.site-title a:hover {
-  color: #0365d6;
-  text-decoration: none;
-  transition: color 0.15s;
 }
 
 header a {
@@ -83,8 +142,28 @@ nav {
 
 
 /* MAIN */
+article a {
+  text-decoration: underline;
+}
+
+article a:hover, article a:visited {
+  background-color: var(--accent-color);
+}
+
+article p {
+  margin-bottom: var(--paragraphBreakHeight);
+}
+
+.highlighted {
+  background-color: var(--accent-color);
+}
+
 .button img {
   width: 140px;
+}
+
+.button:hover {
+  background-color: var(--background);
 }
 
 
@@ -131,6 +210,7 @@ footer {
 .grid_item {
   width: var(--gridItemWidth);
   margin-bottom:var(--gutter);
+  /* text-transform: lowercase; */
 }
 
 .grid_item img {
