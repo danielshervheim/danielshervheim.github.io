@@ -4,6 +4,8 @@ image: /assets/img/placeholder.jpg
 permalink: /hidden_projects/csci-8980/project-3
 ---
 
+[← Back to CSCI 8980](/hidden_projects/csci-8980)
+
 # Project 3
 ## Chess in GEFS
 
@@ -26,5 +28,5 @@ We also ported an [open source easing library](https://github.com/nicolausYes/ea
 
 ## Reports
 
-- [Report on use of animation](/hidden_projects/csci-8980/project-3/report-1)
-- [Report on design and technical aspects](/hidden_projects/csci-8980/project-3/report-2)
+- [Report on the use of animation](/hidden_projects/csci-8980/project-3/report-1)
+- [Report on the design and technical aspects](/hidden_projects/csci-8980/project-3/report-2)

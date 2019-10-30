@@ -4,23 +4,30 @@ image: /assets/img/placeholder.jpg
 permalink: /hidden_projects/csci-5611/project-2
 ---
 
+[← Back to CSCI 5611](/hidden_projects/csci-5611)
+
 # Project 2
 ## Physical Simulation
 
 ## 1. Cloth Simulation
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yDs7N-dbP4A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/J_5PoH2mDCg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/06mVig4gw7A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Cqj74mSNtGo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/I_Ga4QWulWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Vrs03UxBzfc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<br>
 
 A cloth simulation I wrote for a class assignment. I implemented it in the [Unity](https://www.unity3d.com/) engine. The source code, installation instructions, and usage instructions can be found on my Github page [here](https://github.com/danielshervheim/Cloth-Simulation).
 
@@ -61,6 +68,7 @@ Collision detection is (currently) not continuous, so fast moving  nodes, or fas
 ## 2. Fluid Simulation
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aUgFWNUzMw0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 A fluid simulation I wrote for a class assignment. I implemented it in the [Unity](https://www.unity3d.com/) engine. The source code, installation instructions, and usage instructions can be found on my GitHub page [here](https://github.com/danielshervheim/Fluid-Simulation).
 

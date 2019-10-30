@@ -4,18 +4,18 @@ image: /assets/img/placeholder.jpg
 permalink: /hidden_projects/csci-8980/project-1
 ---
 
-### Asteroid Run
+[← Back to CSCI 8980](/hidden_projects/csci-8980)
+
+# Project 1
+## Asteroid Run
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u62XxwUIDcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
 ![screenshot](https://imgur.com/t9RPU0Z.png)
 
-
-
-
-
-
-
-#### About
+## About
 
 **Asteroid Run** is an endless runner set in the far reaches of the cosmos. As the captain, your goal is to pilot your starship and explore the final frontier for as long as you can. The longer you survive, the more points you gain!
 
@@ -26,7 +26,7 @@ permalink: /hidden_projects/csci-8980/project-1
 
 
 
-#### Planned Features
+## Planned Features
 
 I had initially planned to add a blaster component which would allow you to break apart large asteroids into smaller, more manageable chunks.
 
@@ -37,28 +37,27 @@ I would also like to improve the sound design of the game. Currently there are s
 Finally, I would like to add more visual effects such as a bloom around the ship's boosters, textures on the asteroids, and improved flame trails.
 
 ![concept art](https://imgur.com/XxCmDtH.png)
-
-*Concept art, how I wanted the game to look ideally.*
-
+>Concept art, how I wanted the game to look ideally.
 
 
-#### Key Algorithms and Techniques
 
-##### Numerical Integration
+## Key Algorithms and Techniques
+
+### Numerical Integration
 
 Asteroids, stars, and fuel cells have a constant velocity and are updated by numerical integration each frame. The ship itself is updated by a numerical integration process each frame, but also experiences acceleration and deceleration based on whether the boosters are ignited and whether the engine is idling or not.
 
-##### Parallax Effect
+### Parallax Effect
 
 The stars in the background experience a parallax effect to help give the user a sense of depth.
 
 Each star has a unique "offset" (between 0.25 and 1.5) which is generated at the start of the game. Each star's radius is then multiplied by it's offset to give the appearance of depth. Each star's speed is also multiplied by it's offset so that "nearer" stars appear to move faster. Finally, each star's x position is multiplied by the inverse of the mouse's x position to complete the parallax effect.
 
-##### Procedural Asteroid Shapes
+### Procedural Asteroid Shapes
 
 Each asteroid has a unique shape that is procedurally generated at spawn time. The algorithm first generates a circle of 9 vertices. Each vertex is then randomly offset by a tiny amount in the x and y directions. The result is an asteroid that is roughly circular, but also looks unique from any other.
 
-##### Screen Space Collision Detection
+### Screen Space Collision Detection
 
 Because each asteroid has a different shape, collision detection is not a trivial problem.
 
@@ -83,12 +82,11 @@ In the end, I went with a screen space approach. It went like this:
 The downside is that the scene must be rendered *almost* twice (in the collision texture, only the asteroids, fuel cells, and ship need to be rendered. No special effects are required).
 
 ![collision texture](https://imgur.com/f7OxvUc.png)
-
-*Example of a collision texture.*
-
+>Example of a collision texture.
 
 
-#### Bottlenecks and Limitations
+
+## Bottlenecks and Limitations
 
 Initially the screen space collision detection was a bottleneck. I was checking every pixel in the collision texture for magenta and yellow pixels. It ran, but very slowly and with much lag. It then occured to me that I only care about the ship itself, so rather than checking every pixel in the collision texture I just checked a small box of pixels centered around the ship.
 
@@ -96,7 +94,7 @@ I also had a bloom effect in the game initially. After the normal scene rendered
 
 
 
-##### Processing as a Game Engine
+## Processing as a Game Engine
 
 The feature I found myself missing the most from a more full-featured game engine was a UI / layouting system. I had to create my own ```button()``` method to handle button clicks on the screen, and laying out my UI elements was a frustrating exercise in guessing the correct height and y position.
 
@@ -106,15 +104,14 @@ I also missed having more control over the rendering. Processing is good for sim
 
 
 
-##### Game Setup
+## Game Setup
 
 My game has 3 states: MAINMENU, PLAY, GAMEOVER. I made an enum to keep track of these different states. Every frame, a different set of code runs depending on the current game state.
 
 In each state, there are a series of checks to determine if the game state should change. For instance, in the MAINMENU state, we can only change to the PLAY state if the play button was pressed.
 
 ![state machine](https://imgur.com/zvNqF1C.png)
-
-*Graph of the game state flow.*
+>Graph of the game state flow.
 
 
 
@@ -139,12 +136,12 @@ Each class is responsible for its own implementation of "Update" and "Draw". For
 
 
 
-#### Credits
+## Credits
 
 **Asteroid Run** is a simple game written in [Processing](https://processing.org/). It uses the [processing-sound](https://processing.org/reference/libraries/sound/) library, free sound effects from [SoundBible](http://soundbible.com/), and free fonts from [Google Fonts](https://fonts.google.com/). The rest of the work is my own.
 
 
 
-#### Source Code
+## Source Code
 
 The source code is available to download [here](https://drive.google.com/drive/folders/15e5d5eMOY7Mnlr6pb9vtDpczVOlYjQ4Q?usp=sharing).

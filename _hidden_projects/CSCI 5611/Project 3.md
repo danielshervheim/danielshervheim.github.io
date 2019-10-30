@@ -4,16 +4,22 @@ image: /assets/img/placeholder.jpg
 permalink: /hidden_projects/csci-5611/project-3
 ---
 
+[← Back to CSCI 5611](/hidden_projects/csci-5611)
+
 # Project 3
 ## Path Planning
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DxKMQp_Z_j0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3Hd-tyJBBts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FHYsOk5XwhA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rcr8cJHw1XQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 This is a joint project between myself and [Ben Lemma](mailto:lemma017@umn.edu). I was primarily responsible for the boids, while he took care of the A* implementation and path-finding. A Github repository with our code is [here.](https://github.umn.edu/sherv029/5611hwk3/tree/master/Assets/Flocking/Scripts)
 

@@ -4,14 +4,19 @@ image: /assets/img/placeholder.jpg
 permalink: /hidden_projects/csci-5611/project-1
 ---
 
+[← Back to CSCI 5611](/hidden_projects/csci-5611)
+
 # Project 1
 ## Particle System
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OdgPrdHz6cI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KyDh5KuZ6vI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hT2g4IP0Dn8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 A particle system I wrote for a class assignment. I implemented it in the [Unity](https://www.unity3d.com/) engine. The source code, installation instructions, and usage instructions can be found on my Github page [here](https://github.com/danielshervheim/Particle-System-in-Unity).
 

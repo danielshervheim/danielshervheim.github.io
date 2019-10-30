@@ -17,7 +17,7 @@ I was responsible for the following contributions:
 - Cleaning up the models and UV maps in blender.
 - Programming in Unity (mainly the map and audio systems).
 - Optimization for mobile VR in Unity.
-<br/>
+<br><br>
 
 <a target="blank" href="https://play.google.com/store/apps/details?id=com.aisos.virtualmisls" class="button">
   <img src="/assets/img/buttons/playstore_button.png" description="Get it on Google Play"/>
@@ -26,9 +26,18 @@ I was responsible for the following contributions:
 <a target="blank" href="https://apps.apple.com/us/app/id1434870165" class="button">
   <img src="/assets/img/buttons/appstore_button.png" description="Get it on the App Store"/>
 </a>
+<br>
 
 ![0](https://imgur.com/Aglji44.png)
+<br>
+
 ![1](https://imgur.com/RooyOEM.png)
+<br>
+
 ![2](https://imgur.com/PLuJj9j.png)
+<br>
+
 ![3](https://imgur.com/obc6fd6.png)
+<br>
+
 ![4](https://imgur.com/E3u6opZ.png)
