@@ -6,6 +6,10 @@ author: "Daniel Shervheim"
 description: "A Personal Portfolio."
 email: "danielshervheim@gmail.com"
 
+# Syntax highlighting
+markdown: kramdown
+highlighter: rouge
+
 # User collections
 collections:
   projects:

@@ -13,18 +13,17 @@ permalink: /hidden_projects/csci-8980/project-3/report-2
 
 ## 1. Design Decisions
 
-We chose chess since it is a game that many people are familiar with. We felt it the rules were complex enough to provide us with a good challenge.
+We chose chess since it is a game that many people are familiar with. We felt the rules were complex enough to provide us with a good challenge.
 
-We designed our version to be as faithful to a physical chess set as possible (both in experience and visual appearance). We implemented each piece type's unique moves, endgame conditions, a play clock for each opponent, and a few other obscure rules (e.g. the ability to "upgrade" a pawn which make it to the opposite side of the board).
+We designed our version to be as faithful to a physical chess set as possible (both in experience and visual appearance). We implemented each piece type's unique moves, endgame conditions, a play clock for each opponent, and a few other obscure rules (e.g. the ability to evolve a pawn that make it to the opposite side of the board into a queen).
 
-We also wanted our version to look like a real chessboard, so we extended the GEFS engine to help support our goal. We modified the PBR shader to take both a normal map and metal/roughness maps into account when shading the surfaces in the game. This allowed us to get more realistic looking chess pieces.
+We also wanted our version to look like a real chessboard, so we extended GEFS to help support our goal. We modified the PBR shader to take both a normal map and metal/roughness maps into account when shading the surfaces in the game. This allowed us to get more realistic looking chess pieces.
 
 Because we are working digitally, it allowed us to improve upon a physical chess set in a few key ways. Because the player cannot physically pick up the digital pieces, we introduced a cursor that they can use to make selections and move pieces. We also highlight playable pieces and open tiles. This helps guide newer players when deciding moves, and takes some of the burden of remembering the rules off of the players.
 
 Our game continues until the endgame conditions are met, just like in a physical chess set. If you capture your opponents piece, or put their king in checkmate, then you win. If your play clock runs out, then you lose.
 
 ## 2. Technical Decisions
-
 
 In this section we go in-depth in the process of programming the game logic.
 
