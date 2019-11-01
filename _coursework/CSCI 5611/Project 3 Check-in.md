@@ -1,13 +1,10 @@
 ---
 title: Project 3 Check-in
 image: /assets/img/placeholder.jpg
-permalink: /hidden_projects/csci-5611/project-3-check-in
+permalink: /coursework/csci-5611/project-3-checkin
 ---
 
-[← Back to CSCI 5611](/hidden_projects/csci-5611)
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WeduF_x5yRQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br>
 
 [Github Link](https://github.umn.edu/sherv029/S19_5611/tree/master/Homework 3/Assets).
 

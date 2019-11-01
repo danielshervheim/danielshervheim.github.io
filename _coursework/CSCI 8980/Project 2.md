@@ -1,10 +1,8 @@
 ---
 title: CSCI 8980 Project 2
 image: /assets/img/placeholder.jpg
-permalink: /hidden_projects/csci-8980/project-2
+permalink: /coursework/csci-8980/project-2
 ---
-
-[← Back to CSCI 8980](/hidden_projects/csci-8980)
 
 # Project 2
 ## Rendering Large Scenes

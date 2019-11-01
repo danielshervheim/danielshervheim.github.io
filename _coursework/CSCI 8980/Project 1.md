@@ -1,17 +1,13 @@
 ---
 title: CSCI 8980 Project 1
 image: /assets/img/placeholder.jpg
-permalink: /hidden_projects/csci-8980/project-1
+permalink: /coursework/csci-8980/project-1
 ---
-
-[← Back to CSCI 8980](/hidden_projects/csci-8980)
 
 # Project 1
 ## Asteroid Run
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u62XxwUIDcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
 
 ![screenshot](https://imgur.com/t9RPU0Z.png)
 

@@ -6,28 +6,25 @@ author: "Daniel Shervheim"
 description: "A Personal Portfolio."
 email: "danielshervheim@gmail.com"
 
-# Syntax highlighting
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
 
 # User collections
 collections:
-  projects:
-    output: true
-  hidden_projects:
-    output: true
+    projects:
+        output: true
+    coursework:
+        output: true
 
+# Collection defaults.
 defaults:
-  - scope:
-      path: ""
-      type: "projects"
+-
+    scope:
+        path: "_projects"
+        type: "projects"
     values:
-      layout: page
-  - scope:
-      path: ""
-      type: "hidden_projects"
+        layout: page
+-
+    scope:
+        path: "_coursework"
+        type: "coursework"
     values:
-      layout: page
+        layout: page

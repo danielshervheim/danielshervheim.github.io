@@ -1,10 +1,10 @@
 ---
 title: Game Development
 image: /assets/img/placeholder.jpg
-permalink: /hidden_projects/csci-8980/project-3/report-2
+permalink: /coursework/csci-8980/project-3/report-2
 ---
 
-[← Back to Project 3](/hidden_projects/csci-8980/project-3)
+<!-- [← Back to Project 3](/coursework/csci-8980/project-3) -->
 
 # Game Development
 

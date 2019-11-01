@@ -1,6 +1,8 @@
 ---
 ---
-<!-- empty front matter to force jekyll processing. -->
+{% comment %}
+    Empty front matter to force jekyll processing.
+{% endcomment %}
 
 <!doctype html>
 
@@ -21,5 +23,10 @@
 	</main>
 
 	{% include footer.html %}
+
+	<!-- Include mathjax if the page requires it. -->
+	{% if page.mathjax %}
+		{% include js_mathjax.html %}
+	{% endif %}
 </body>
 </html>
