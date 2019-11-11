@@ -37,7 +37,7 @@ There were a few key visual elements I knew I had to achieve. I detail them belo
 wip
 
 ![depth](https://imgur.com/tB4de8r.png)
-> From left to right: 1) sphere depth, 2) surface depth, 3)  optical depth.
+> From left to right: 1) volume depth, 2) surface depth, 3)  optical depth (minimum of both).
 
 Wip
 
@@ -45,6 +45,38 @@ Wip
 > From left to right: 1) tinted blue by optical density, 2) tinted green uniformly, 3) foam added based on the surface depth.
 
 Wip
+
+```c
+// Sample the depth and color of the object behind the water. This works because our water shader is transparent (i.e. rendered after all opaque objects).
+float depth = tex2D(depthTex, screencoord).r;
+float3 color = tex2D(colorTex, screencoord).rgb;
+
+// Get the distance from the water to the surface behind the water.
+float distToWater = length(vertexPos - viewPos);
+float surfaceDepth = depth - distToWater;
+
+// Get the distance from the water to the water on the other side of the sphere.
+// Note: t0 and t1 are returned as the x and y components of a float2.
+float2 t = RaySphereIntersection(viewPos, viewDir, spherePos, sphereRadius);
+float volumeDepth = abs(t.x - t.y);
+
+// Calculate the optical density.
+float opticalDepth = min(surfaceDepth, volumeDepth);
+float opticalDensity = 1 - saturate(exp(-waterDensity * opticalDepth));
+
+// Tint the color blue by the optical density.
+color *= lerp(float3(1,1,1), deepColor, opticalDensity);
+
+// Tint the color green uniformly.
+color *= shallowColor;
+
+// Calculate the foam ring based on the surface depth.
+float foam = surfaceDepth < foamThreshold ? 1 : 0;
+
+// Add the foam and return the resulting pixel color.
+color += float3(1,1,1)*foam;
+return float4(saturate(color), 1);
+```
 
 
 ## The Clouds
