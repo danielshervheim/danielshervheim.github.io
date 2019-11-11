@@ -36,8 +36,15 @@ There were a few key visual elements I knew I had to achieve. I detail them belo
 
 wip
 
+![depth](https://imgur.com/BwNz9o9.png)
+> From left to right: 1) sphere depth, 2) surface depth, 3)  optical depth.
 
+Wip
 
+![color](https://imgur.com/CasWjQe.png)
+> From left to right: 1) tinted by optical density, 2) tinted uniformly by green, 3) foam added based on surface depth.
+
+Wip
 
 
 ## The Clouds
