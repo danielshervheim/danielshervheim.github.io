@@ -36,13 +36,13 @@ There were a few key visual elements I knew I had to achieve. I detail them belo
 
 wip
 
-![depth](https://imgur.com/BwNz9o9.png)
+![depth](https://imgur.com/tB4de8r.png)
 > From left to right: 1) sphere depth, 2) surface depth, 3)  optical depth.
 
 Wip
 
-![color](https://imgur.com/CasWjQe.png)
-> From left to right: 1) tinted by optical density, 2) tinted uniformly by green, 3) foam added based on surface depth.
+![color](https://imgur.com/B4upoSA.png)
+> From left to right: 1) tinted blue by optical density, 2) tinted green uniformly, 3) foam added based on the surface depth.
 
 Wip
 
