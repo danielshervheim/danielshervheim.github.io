@@ -5,14 +5,19 @@ permalink: /coursework/csci-5611/project-4
 ---
 
 # Project 4
-## SPH Particle Simulation and Rendering
+## SPH Simulation and Rendering
 
-- Bayo, Q
-- Lemma, Ben
-- Shervheim, Dan
+- [Q Bayo](mailto:bayo0006@umn.edu)
+- [Ben Lemma](mailto:lemma017@umn.edu)
+- [Dan Shervheim](mailto:sherv029@umn.edu)
 
+## Videos
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ltnG4ZWAdxA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Code: [Github](https://github.umn.edu/sherv029/S19_5611/tree/master/Homework 5/Assets/)
+## Soure Code
 
-Report: [download PDF](/assets/files/final_report.pdf)
+The source code is available to download [here](https://github.umn.edu/sherv029/S19_5611/tree/master/Homework 5/Assets/).
+
+## Reports
+
+- [Report on SPH simulation and rendering](/assets/files/final_report.pdf)
