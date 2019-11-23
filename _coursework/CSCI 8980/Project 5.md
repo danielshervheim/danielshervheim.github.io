@@ -40,3 +40,9 @@ $ \int_{0}^{d} \sigma_{t}(x+tw)dt \approx \frac{d}{n} * (\frac{\sigma_{t}(x+0w)}
 We can easily compute this in a shader with a loop. Once we have $\tau$, the transmittance $T_{r}$ is easily calculated:
 
 $T_{r}(x \rightarrow x') = e^{-\tau(x \rightarrow x')}$
+
+### Note on the Extinction Coefficient $\sigma_{t}$
+
+The extinction coefficient $\sigma_{t}$ (sometimes called the [attenuation coefficient](https://en.wikipedia.org/wiki/Attenuation_coefficient)) characterizes how easily a volume of material can be penetrated by a beam. It must be $ \geq 0$.
+
+In general, one could think of it as the "thickness" of the fog at a certain position. The value can vary across the volume. For example, one could use 3D noise for a base density, then inject additional densities via SDFs, analytical functions, or other methods.
