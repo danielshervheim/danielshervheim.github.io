@@ -1,0 +1,42 @@
+---
+title: CSCI 8980 Project 5
+image: /assets/img/placeholder.jpg
+permalink: /coursework/csci-8980/project-5
+mathjax: true
+---
+
+# Project 5
+
+## Volumetric Lighting in Unity
+
+For this project i wanted to experiment with implementing volumetric lighting in Unity. Please note that this page is a work-in-progress!
+
+## Notes
+
+These are for my own reference.
+
+### Derivation of Optical Depth $\tau$ and Transmittance $T_{r}$
+
+The optical depth $\tau$ between two points $x$ and $x'$ is equal to the integration of the extinction coefficient at each point along the ray.
+
+$\tau (x\rightarrow x') = \int_{0}^{d} \sigma_{t} (x+tw)dt$
+
+<!-- TODO: this is confusing to use d for distance since its used for derivation, and t for parameterization of ray since it already denotes the extinction coefficient. -->
+
+Where $d$ is the distance between $x$ and $x'$, $w$ is a unit vector from $x$ to $x'$, and $t$ parameterizes the line between $x$ and $x'$ (i.e. $0 \leq t \leq d$).
+
+If the extinction coefficient is constant along the viewing ray (i.e. the participating media is homogeneous), then the integral simplifies to:
+
+$\tau (x \rightarrow x') = d \sigma_{t}$
+
+Unfortunately this is rarely the case, so we must integrate. For reference, below is the formula for numerical integration with the trapezoidal method.
+
+$\int_{a}^{b} f(x)dx \approx \frac{b-a}{n} * (\frac{f(a)}{2} + \sum_{k=1}^{n-1} (f(a + k \frac{b-a}{n}) ) + \frac{f(b)}{2} )$
+
+When we plug this formula into the original optical depth integral, we get the following summation:
+
+$ \int_{0}^{d} \sigma_{t}(x+tw)dt \approx \frac{d}{n} * (\frac{\sigma_{t}(x+0w)}{2} + \sum_{k=1}^{n-1} (\sigma_{t}(x+d\frac{k}{n}w) ) + \frac{\sigma_{t}(x+dw)}{2} )$
+
+We can easily compute this in a shader with a loop. Once we have $\tau$, the transmittance $T_{r}$ is easily calculated:
+
+$T_{r}(x \rightarrow x') = e^{-\tau(x \rightarrow x')}$
