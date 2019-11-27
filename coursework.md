@@ -8,7 +8,7 @@ layout: page
 ## Animation and Planning in Games
 
 1. [Particle system](/projects/particle-system)
-2. [Cloth and fluid simulations](/coursework/csci-5611/project-2)
+2. [Cloth simulation](/projects/cloth-simulation) and [fluid simulation](/projects/fluid-simulation)
 3. [Multi-agent path-planning](/coursework/csci-5611/project-3)
 4. [SPH fluid simulation and rendering](/coursework/csci-5611/project-4)
 
