@@ -7,15 +7,15 @@ layout: page
 # CSCI 5611
 ## Animation and Planning in Games
 
-- [Project 1](/coursework/csci-5611/project-1)
-- [Project 2](/coursework/csci-5611/project-2)
-- [Project 3](/coursework/csci-5611/project-3)
-- [Project 4](/coursework/csci-5611/project-4)
+1. [Particle system](/projects/particle-system)
+2. [Cloth and fluid simulations](/coursework/csci-5611/project-2)
+3. [Multi-agent path-planning](/coursework/csci-5611/project-3)
+4. [SPH fluid simulation and rendering](/coursework/csci-5611/project-4)
 
 # CSCI 8980
 ## Game Engine Technologies
 
-- [Project 1](/coursework/csci-8980/project-1)
-- [Project 2](/coursework/csci-8980/project-2)
-- [Project 3](/coursework/csci-8980/project-3)
-- [Project 4](/coursework/csci-8980/project-4)
+1. [A simple game in Processing](/coursework/csci-8980/project-1)
+2. [Frustum culling in OpenGL](/coursework/csci-8980/project-2)
+3. [Chess in OpenGL](/coursework/csci-8980/project-3)
+4. [Stylized shaders](/coursework/csci-8980/project-4)
