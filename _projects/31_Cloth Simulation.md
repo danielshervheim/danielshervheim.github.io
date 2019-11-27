@@ -10,17 +10,17 @@ I wrote this cloth simulation as a project for an animation and planning course 
 
 ## Media
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yDs7N-dbP4A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/J_5PoH2mDCg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<!-- Wind Contribution -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/06mVig4gw7A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Cqj74mSNtGo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- Air Resistance -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J_5PoH2mDCg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/I_Ga4QWulWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<!-- Spring Contributions -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Vrs03UxBzfc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- Collision Detection -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yDs7N-dbP4A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## About
 
