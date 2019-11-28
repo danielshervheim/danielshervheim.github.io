@@ -10,7 +10,7 @@ layout: page
 1. [Particle system](/projects/particle-system)
 2. [Cloth simulation](/projects/cloth-simulation) and [fluid simulation](/projects/fluid-simulation)
 3. [Multi-agent path-planning](/projects/multi-agent-path-planning)
-4. [SPH fluid simulation and rendering](/coursework/csci-5611/project-4)
+4. [SPH fluid simulation and rendering](/projects/smoothed-particle-hydrodynamics)
 
 # CSCI 8980
 ## Game Engine Technologies
