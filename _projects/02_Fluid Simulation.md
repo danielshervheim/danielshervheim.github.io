@@ -16,7 +16,7 @@ Our directive was to implement a physically-based simulation in real-time. I cho
 
 ## About
 
-I referenced Jos Stam's paper [Real-Time Fluid Dynamics for Games](https://www.researchgate.net/publication/2560062_Real-Time_Fluid_Dynamics_for_Games) heavily in my implementation.
+I referenced Jos Stam's paper *[Real-Time Fluid Dynamics for Games](https://www.researchgate.net/publication/2560062_Real-Time_Fluid_Dynamics_for_Games)* heavily in my implementation.
 
 The basic idea is that two grids are kept: a grid of densities and a grid of velocities.
 

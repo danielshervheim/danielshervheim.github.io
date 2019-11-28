@@ -11,11 +11,11 @@ layout: page
 
 I'm Dan!
 
-I’m studying computer science with a focus on graphics programming at the [University of Minnesota](https://www.cs.umn.edu/). I work as a teaching assistant and at [AISOS](http://aisos.umn.edu/), both at the U.
+I’m studying computer science with a focus on computer graphics at the [University of Minnesota](https://www.cs.umn.edu/). I currently work as a computer science teaching assistant and at [AISOS](http://aisos.umn.edu/), where I help build informative digital experiences.
 
-I plan to graduate in December 2019, and intend to continue at the U to pursue my Masters degree in computer science.
+I plan to graduate in December 2019, and intend to pursue a master's degree in computer science at the university.
 
-In my spare time I like to read, draw, make 3D models, program games, spend time with my family and explore!
+In my spare time I like to read, draw, make games, spend time with my family, and explore the world around me!
 
 My resume is available [here](https://docs.google.com/document/d/1pAoeWMVmRG-uOplchmDD8qh1SfPuwfCJ26882EFppic/edit?usp=sharing).
 
