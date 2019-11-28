@@ -6,7 +6,10 @@ permalink: /projects/cloth-simulation
 
 # Cloth Simulation
 
-I wrote this cloth simulation as a project for an animation and planning course I took in university. Our directive was to implement a physically-based cloth simulation that could interact with the world in real-time.
+
+In spring 2019 I took **Animation and Planning in Games** with Dr. Stephen Guy. I wrote this cloth simulation for his course.
+
+Our directive was to implement a physically-based cloth simulation that could interact with the world in real-time.
 
 ## Media
 

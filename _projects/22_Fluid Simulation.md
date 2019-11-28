@@ -6,7 +6,9 @@ permalink: /projects/fluid-simulation
 
 # Fluid Simulation
 
-I wrote this fluid simulation as a project for an animation and planning course I took in university. Our directive was to implement a physically-based simulation in real-time. I chose to offload the simulation to the GPU via compute shaders. This allowed me to simulate a 1024 × 1024 grid in real-time.
+In spring 2019 I took **Animation and Planning in Games** with Dr. Stephen Guy. I wrote this fluid simulation for his course.
+
+Our directive was to implement a physically-based simulation in real-time. I chose to offload the simulation to the GPU via compute shaders. This allowed me to simulate a 1024 × 1024 grid in real-time.
 
 ## Media
 

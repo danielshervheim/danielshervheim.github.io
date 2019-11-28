@@ -6,7 +6,9 @@ permalink: /projects/particle-system
 
 # Particle System
 
-I wrote this particle system as a project for an animation and planning course I took in university. Our directive was to implement a particle system capable of handling a large number of particles in real-time. I chose to offload the simulation and rendering components to the GPU via compute shaders. This allowed me to simulate a hundreds of thousands of particles in real-time.
+In spring 2019 I took **Animation and Planning in Games** with Dr. Stephen Guy. I wrote this particle system for his course.
+
+Our directive was to implement a particle system capable of handling a large number of particles in real-time. I chose to offload the simulation and rendering components to the GPU via compute shaders. This allowed me to simulate a hundreds of thousands of particles in real-time.
 
 ## Media
 
