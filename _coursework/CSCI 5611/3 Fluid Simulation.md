@@ -1,7 +1,7 @@
 ---
 title: Fluid Simulation
 image: /assets/img/cover_photos/fluid_simulation.jpg
-permalink: /projects/fluid-simulation
+permalink: /coursework/csci-5611/fluid-simulation
 ---
 
 # Fluid Simulation

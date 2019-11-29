@@ -1,0 +1,30 @@
+---
+---
+{% comment %}
+    Empty front matter to force jekyll processing.
+{% endcomment %}
+
+<!doctype html>
+
+<html lang="en">
+<head>
+	{% include head.html %}
+</head>
+
+<body class="markdown-body">
+	{% include header.html %}
+
+	<main>
+        <ul>
+            {% for post in site.posts %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+	</main>
+
+	{% include footer.html %}
+	{% include js_no_fix.html %}
+</body>
+</html>

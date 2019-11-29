@@ -1,11 +1,16 @@
 ---
-title: CSCI 8980 Project 1
-image: /assets/img/placeholder.jpg
-permalink: /coursework/csci-8980/project-1
+title: Asteroid Run
+image: /assets/img/cover_photos/asteroid_run.png
+permalink: /coursework/csci-8980/asteroid-run
 ---
 
-# Project 1
-## Asteroid Run
+# Asteroid Run
+
+In fall 2019 I took **Game Engine Technologies** with Dr. Stephen Guy. I made this game for his course.
+
+Our directive was to create a simple game in [Processing](https://processing.org/). Our game had to be somewhat inspired by the "bubble pop" game genre. I chose to implement an endless runner set in outer space.
+
+## Media
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u62XxwUIDcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -59,21 +64,55 @@ Because each asteroid has a different shape, collision detection is not a trivia
 
 I looked into ways to triangulate the asteroids, after which I could do a series of triangle-triangle collision checks with the ship. However, triangulation of a potentially non-convex shape ended up being a harder problem than I wanted to tackle in the limited amount of time, so I turned to another approach.
 
-In the end, I went with a screen space approach. It went like this:
+In the end, I went with a screen space approach which allowed me pixel-perfect collision detection.
 
-- Set the render target to an empty texture
-- Clear the background to black (0, 0, 0, 1)
-- Change the blending mode to ADD
-- For each asteroid
-  - Render the asteroid in green (0, 1, 0, 0)
-- For each fuel cell
-  - Render the fuel cell in blue (0, 0, 1, 0)
-- Render the ship in red (1, 0, 0, 0)
-- Reset the blending mode to DEFAULT
-- For each pixel in a box around the ship
-  - If the pixel is magenta (1, 0, 1, 1) then return FUEL CELL COLLISION
-  - if the pixel is yellow (1, 1, 0, 1) then return ASTEROID COLLISION
-- return NO COLLISION
+```java
+// Set the render target to an empty texture
+collisionTexture.background(0);
+
+// Change the blend mode to ADD.
+collisionTexture.blendMode(ADD);
+
+// Draw the ship in red onto the collision texture.
+collisionTexture.fill(255, 0, 0);
+ship.DrawCollider(collisionTexture);
+
+// Draw each asteroid collider in green onto the collision texture.
+collisionTexture.fill(0, 255, 0);
+foreach (Asteroid a in asteroids)
+{
+    a.DrawCollider(collisionTexture);
+}
+
+// Draw each fuel cell collider in blue onto the collision texture.
+collisionTexture.fill(0, 0, 255);
+foreach (FuelCell f in fuelCells)
+{
+    f.DrawCollider(collisionTexture);
+}
+
+// Reset the blend mode to default.
+collisionTexture.blendMode(DEFAULT);
+
+// Check each pixel around the ship for collisions.
+for (int y = ship.y - ship.height; y < ship.y + ship.height; y++)
+{
+    for (int x = ship.x - ship.width; x < ship.x + ship.width; x++)
+    {
+        color pixel = collisionTexture.pixel(x, y);
+        if (pixel.r > 0 && pixel.g > 0)
+        {
+            return Collision.Asteroid;
+        }
+        else if (pixel.r > 0 && pixel.b > 0)
+        {
+            return Collision.FuelCell;
+        }
+    }
+}
+
+return Collision.None;
+```
 
 The downside is that the scene must be rendered *almost* twice (in the collision texture, only the asteroids, fuel cells, and ship need to be rendered. No special effects are required).
 
@@ -120,13 +159,30 @@ Objects which can collide with each other additionally have a `DrawCollider(PGra
 
 Then, every frame the following algorithm updates the objects:
 
-- For each star
-  - Update, then draw
-- For each asteroid
-  - Update, then draw
-- For each fuel cell
-  - Update, then draw
-- Update, then draw the ship
+```java
+foreach (Star s in stars)
+{
+    s.Update();
+    s.Draw();
+}
+
+foreach (Asteroid a in asteroids)
+{
+    a.Update();
+    a.Draw();
+}
+
+foreach (FuelCell f in fuelCells)
+{
+    f.Update();
+    f.Draw();
+}
+
+ship.Update();
+ship.Draw();
+
+ResolveCollisions();
+```
 
 Each class is responsible for its own implementation of "Update" and "Draw". For example, we may update the ship by making it follow the mouse. But we may update the asteroid by destroying it and spawning a new one in if its below the window.
 

@@ -1,15 +1,17 @@
 ---
-title: CSCI 8980 Project 5
-image: /assets/img/placeholder.jpg
-permalink: /coursework/csci-8980/project-5
+title: Volumetric Lighting
+permalink: /coursework/csci-8980/volumetric-lighting
 mathjax: true
+display: false
 ---
 
-# Project 5
+# Volumetric Lighting
 
-## Volumetric Lighting in Unity
+In fall 2019 I took **Game Engine Technologies** with Dr. Stephen Guy. I wrote this volumetric lighting system for his course.
 
-For this project i wanted to experiment with implementing volumetric lighting in Unity. Please note that this page is a work-in-progress!
+Our directive was to expand upon a topic we found interesting from earlier in the course. I chose to explore real-time volumetric lighting.
+
+(Please note that this page is a work-in-progress)!
 
 ## Notes
 

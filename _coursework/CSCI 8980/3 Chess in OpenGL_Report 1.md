@@ -1,10 +1,8 @@
 ---
 title: Use of Animation
-image: /assets/img/placeholder.jpg
 permalink: /coursework/csci-8980/project-3/report-1
+display: false
 ---
-
-<!-- [← Back to Project 3](/coursework/csci-8980/project-3) -->
 
 # Use of Animation
 

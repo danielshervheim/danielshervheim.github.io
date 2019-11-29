@@ -1,10 +1,8 @@
 ---
 title: Game Development
-image: /assets/img/placeholder.jpg
 permalink: /coursework/csci-8980/project-3/report-2
+display: false
 ---
-
-<!-- [← Back to Project 3](/coursework/csci-8980/project-3) -->
 
 # Game Development
 

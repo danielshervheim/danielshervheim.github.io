@@ -1,7 +1,7 @@
 ---
 title: Particle System
 image: /assets/img/cover_photos/particle_system.jpg
-permalink: /projects/particle-system
+permalink: /coursework/csci-5611/particle-system
 ---
 
 # Particle System

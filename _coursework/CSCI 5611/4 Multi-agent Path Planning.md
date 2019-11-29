@@ -1,12 +1,11 @@
 ---
 title: Multi-agent Path Planning
 image: /assets/img/cover_photos/flocking.png
-permalink: /projects/multi-agent-path-planning
+permalink: /coursework/csci-5611/multi-agent-path-planning
 mathjax: true
 ---
 
 # Multi-agent Path Planning
-
 
 In spring 2019 I took **Animation and Planning in Games** with Dr. Stephen Guy. My classmate [Ben Lemma](mailto:lemma017@umn.edu) and I collaborated on this project.
 

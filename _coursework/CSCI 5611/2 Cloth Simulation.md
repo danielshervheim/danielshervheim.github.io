@@ -1,7 +1,7 @@
 ---
 title: Cloth Simulation
 image: /assets/img/cover_photos/cloth_simulation.png
-permalink: /projects/cloth-simulation
+permalink: /coursework/csci-5611/cloth-simulation
 ---
 
 # Cloth Simulation

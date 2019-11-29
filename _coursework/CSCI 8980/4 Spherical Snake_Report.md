@@ -1,7 +1,7 @@
 ---
 title: The Visuals of Spherical Snake
-image: /assets/img/placeholder.jpg
 permalink: /coursework/csci-8980/project-4/report
+display: false
 ---
 
 # The Visuals of Spherical Snake
@@ -113,7 +113,7 @@ Fragment shader pseudocode:
 ```c
 // Simple Lambertian color.
 float lambert = saturate(dot(vertexNormal, lightDirection));
-float3 color = cloudColor * cloudIntensity * lambert; 
+float3 color = cloudColor * cloudIntensity * lambert;
 
 // Get the Fresnel to "feather" the edges of the cloud.
 float alphaF = 1 - fresnel(vertexNormalWS, viewDirectionWS);

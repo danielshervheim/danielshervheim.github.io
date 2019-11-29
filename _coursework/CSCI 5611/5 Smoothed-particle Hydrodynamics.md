@@ -1,7 +1,7 @@
 ---
 title: Smoothed-particle Hydrodynamics
 image: /assets/img/cover_photos/sph.png
-permalink: /projects/smoothed-particle-hydrodynamics
+permalink: /coursework/csci-5611/smoothed-particle-hydrodynamics
 ---
 
 # Smoothed-particle Hydrodynamics
