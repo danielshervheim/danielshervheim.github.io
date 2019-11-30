@@ -22,6 +22,7 @@
         <div class="grid">
         <div class="gutter"></div>
             {% for item in site.projects %}
+            {% if item.display %}
                 <div class="grid_item">
                     {% if item.redirect %}
                         <a target="_blank" href="{{ item.permalink }}">
@@ -43,6 +44,7 @@
                         </p>
                     {% endif %}
                 </div>
+            {% endif %}
             {% endfor %}
         </div>
 

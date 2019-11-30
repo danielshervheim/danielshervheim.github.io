@@ -27,6 +27,7 @@ defaults:
         type: "projects"
     values:
         layout: page
+        display: true
         image: /assets/img/placeholder.jpg
 -
     scope:
