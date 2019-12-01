@@ -1,6 +1,6 @@
 ---
 title: Chess
-image: /assets/img/cover_photos/chess3.png
+image: /assets/img/cover_photos/chess.png
 permalink: /coursework/csci-8980/project-3
 ---
 

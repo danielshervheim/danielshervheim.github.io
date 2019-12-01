@@ -1,14 +1,14 @@
 ---
-title: Acceleration Techniques in OpenGL
-image: /assets/img/cover_photos/acceleration-techniques-in-opengl.png
-permalink: /coursework/csci-8980/acceleration-techniques-in-opengl
+title: Frustum Culling in OpenGL
+image: /assets/img/cover_photos/frustum-culling2.jpg
+permalink: /coursework/csci-8980/frustum-culling-in-opengl
 ---
 
-# Acceleration Techniques in OpenGL
+# Frustum Culling in OpenGL
 
 A project for Dr. Stephen Guy's class **Game Engine Technologies**. We were provided with a minimal OpenGL game engine written by the professor.
 
-Our directive was to implement acceleration techniques in the provided engine. I chose to implement view-frustum culling, an LOD system, and distance-based sorting.
+Our directive was to implement acceleration techniques in the provided engine. I chose to implement frustum culling, an LOD system, and distance-based sorting.
 
 ## Media
 
