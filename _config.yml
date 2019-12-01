@@ -23,11 +23,16 @@ defaults:
         layout: page
 -
     scope:
+        path: "_posts"
+        type: "posts"
+    values:
+        layout: page
+-
+    scope:
         path: "_projects"
         type: "projects"
     values:
         layout: page
-        display: true
         image: /assets/img/placeholder.jpg
 -
     scope:
@@ -35,5 +40,4 @@ defaults:
         type: "coursework"
     values:
         layout: page
-        display: true
         image: /assets/img/placeholder.jpg

@@ -1,7 +1,7 @@
 ---
 title: Game Development
 permalink: /coursework/csci-8980/project-3/report-2
-display: false
+hide: true
 ---
 
 # Game Development

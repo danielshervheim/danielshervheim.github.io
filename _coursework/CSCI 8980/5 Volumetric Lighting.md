@@ -2,7 +2,7 @@
 title: Volumetric Lighting
 permalink: /coursework/csci-8980/volumetric-lighting
 mathjax: true
-display: false
+hide: true
 ---
 
 # Volumetric Lighting
