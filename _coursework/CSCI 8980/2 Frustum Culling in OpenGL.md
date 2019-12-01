@@ -1,6 +1,6 @@
 ---
 title: Frustum Culling in OpenGL
-image: /assets/img/cover_photos/frustum-culling2.jpg
+image: /assets/img/cover_photos/frustum-culling2.png
 permalink: /coursework/csci-8980/frustum-culling-in-opengl
 ---
 
