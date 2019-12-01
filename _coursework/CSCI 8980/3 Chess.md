@@ -8,7 +8,7 @@ permalink: /coursework/csci-8980/project-3
 
 A project for Dr. Stephen Guy's class **Game Engine Technologies**. My classmate [Tien Dinh](mailto:dinh0080@umn.edu) and I collaborated on this project..
 
-Our directive was to create a game in the [provided game engine](/coursework/csci-8980/acceleration-techniques-in-opengl), using only Lua scripting. Additionally, our game had to demonstrate some form of animation. We chose to create a chess game.
+Our directive was to create a game in the [provided game engine](/coursework/csci-8980/frustum-culling-in-opengl), using only Lua scripting. Additionally, our game had to demonstrate some form of animation. We chose to create a chess game.
 
 ## Media
 ![beauty shot](/assets/img/cover_photos/chess3.png)
