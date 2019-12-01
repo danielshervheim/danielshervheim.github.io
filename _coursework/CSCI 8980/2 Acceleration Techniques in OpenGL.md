@@ -6,7 +6,7 @@ permalink: /coursework/csci-8980/acceleration-techniques-in-opengl
 
 # Acceleration Techniques in OpenGL
 
-In fall 2019 I took **Game Engine Technologies** with Dr. Stephen Guy. We were provided with a minimal OpenGL game engine written by the professor for use in the course.
+A project for Dr. Stephen Guy's class **Game Engine Technologies**. We were provided with a minimal OpenGL game engine written by the professor.
 
 Our directive was to implement acceleration techniques in the provided engine. I chose to implement view-frustum culling, an LOD system, and distance-based sorting.
 

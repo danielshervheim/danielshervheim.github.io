@@ -6,9 +6,11 @@ permalink: /coursework/csci-5611/particle-system
 
 # Particle System
 
-In spring 2019 I took **Animation and Planning in Games** with Dr. Stephen Guy. I wrote this particle system for his course.
+A project for Dr. Stephen Guy's class **Animation and Planning in Games**.
 
-Our directive was to implement a particle system capable of handling a large number of particles in real-time. I chose to offload the simulation and rendering components to the GPU via compute shaders. This allowed me to simulate a hundreds of thousands of particles in real-time.
+Our directive was to implement a particle system capable of handling a large number of particles in real-time.
+
+I chose to offload the simulation and rendering components to the GPU via compute shaders. This allowed me to simulate a hundreds of thousands of particles in real-time.
 
 ## Media
 

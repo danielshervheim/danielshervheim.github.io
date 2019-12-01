@@ -7,7 +7,7 @@ mathjax: true
 
 # Multi-agent Path Planning
 
-In spring 2019 I took **Animation and Planning in Games** with Dr. Stephen Guy. My classmate [Ben Lemma](mailto:lemma017@umn.edu) and I collaborated on this project.
+A project for Dr. Stephen Guy's class **Animation and Planning in Games**. My classmate [Ben Lemma](mailto:lemma017@umn.edu) and I collaborated on this project.
 
 Our directive was to implement a real-time system capable of planning paths for multiple agents in a dynamic environment.
 

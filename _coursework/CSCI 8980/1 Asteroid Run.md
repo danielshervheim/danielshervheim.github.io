@@ -2,11 +2,12 @@
 title: Asteroid Run
 image: /assets/img/cover_photos/asteroid_run.png
 permalink: /coursework/csci-8980/asteroid-run
+hide: true
 ---
 
 # Asteroid Run
 
-In fall 2019 I took **Game Engine Technologies** with Dr. Stephen Guy. I made this game for his course.
+A project for Dr. Stephen Guy's class **Game Engine Technologies**.
 
 Our directive was to create a simple game in [Processing](https://processing.org/). Our game had to be somewhat inspired by the "bubble pop" game genre. I chose to implement an endless runner set in outer space.
 

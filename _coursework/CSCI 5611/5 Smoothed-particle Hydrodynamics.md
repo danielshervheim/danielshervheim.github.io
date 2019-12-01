@@ -6,7 +6,7 @@ permalink: /coursework/csci-5611/smoothed-particle-hydrodynamics
 
 # Smoothed-particle Hydrodynamics
 
-In spring 2019 I took **Animation and Planning in Games** with Dr. Stephen Guy. My classmates [Ben Lemma](mailto:lemma017@umn.edu), [Q Bayo](mailto:bayo0006@umn.edu), and I collaborated on this project.
+A project for Dr. Stephen Guy's class **Animation and Planning in Games**. My classmates [Ben Lemma](mailto:lemma017@umn.edu), [Q Bayo](mailto:bayo0006@umn.edu), and I collaborated on this project.
 
 Our directive was to expand upon a topic we found interesting from earlier in the course. We chose to explore smoothed-particle hydrodynamics.
 

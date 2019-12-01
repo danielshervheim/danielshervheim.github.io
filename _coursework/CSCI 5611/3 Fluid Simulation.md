@@ -6,9 +6,9 @@ permalink: /coursework/csci-5611/fluid-simulation
 
 # Fluid Simulation
 
-In spring 2019 I took **Animation and Planning in Games** with Dr. Stephen Guy. I wrote this fluid simulation for his course.
+A project for Dr. Stephen Guy's class **Animation and Planning in Games**.
 
-Our directive was to implement a physically-based simulation in real-time. I chose to offload the simulation to the GPU via compute shaders. This allowed me to simulate a 1024 × 1024 grid in real-time.
+Our directive was to implement a real-time physically-based simulation.
 
 ## Media
 

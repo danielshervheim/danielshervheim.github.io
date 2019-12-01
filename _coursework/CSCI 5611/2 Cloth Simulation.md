@@ -7,7 +7,7 @@ permalink: /coursework/csci-5611/cloth-simulation
 # Cloth Simulation
 
 
-In spring 2019 I took **Animation and Planning in Games** with Dr. Stephen Guy. I wrote this cloth simulation for his course.
+A project for Dr. Stephen Guy's class **Animation and Planning in Games**.
 
 Our directive was to implement a physically-based cloth simulation that could interact with the world in real-time.
 

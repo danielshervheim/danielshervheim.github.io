@@ -7,11 +7,39 @@ hide: true
 
 # Volumetric Lighting
 
-In fall 2019 I took **Game Engine Technologies** with Dr. Stephen Guy. I wrote this volumetric lighting system for his course.
+A project for Dr. Stephen Guy's class **Game Engine Technologies**.
 
 Our directive was to expand upon a topic we found interesting from earlier in the course. I chose to explore real-time volumetric lighting.
 
-(Please note that this page is a work-in-progress)!
+## 1. Physical Background
+
+The transmittance $T$ between two points $p_a$, $p_b$ is proportional to the optical depth $\tau$ between the same points.
+
+$T (p_a \leftrightarrow p_b) = e^{-\tau (p_a \leftrightarrow p_b)}$
+
+
+
+The optical depth $\tau$ between two points is equal to the sum of the medium's extinction coefficient $\sigma_t$ at each intermediate point.
+
+$\tau (p_a \leftrightarrow p_b) = \int_{p_a}^{p_b} \sigma_{t}(p)dp$
+
+
+
+> Note: the transmittance between two points is associative. That is, $T(p_a \rightarrow p_b) = T(p_a \leftarrow p_b)$. We denote the transmittance function input with $\leftrightarrow$  to show this. 
+
+
+
+
+
+## 2. Implementation Details
+
+
+
+
+
+
+
+
 
 ## Notes
 

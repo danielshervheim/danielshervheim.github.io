@@ -2,17 +2,14 @@
 title: Spherical Snake
 image: /assets/img/cover_photos/spherical-snake.png
 permalink: /coursework/csci-8980/project-4
+hide: true
 ---
 
 # Spherical Snake
 
-In fall 2019 I took **Game Engine Technologies** with Dr. Stephen Guy. I made this project for his course.
+A project for Dr. Stephen Guy's class **Game Engine Technologies**.
 
-Our directive was to write our own shaders, and make something that looked cool. I decided to overhaul the visuals of a game I had made previously.
-
-## About
-
-Spherical Snake is a game I have been working on for the past few months in my spare time. It is a variant of the classic computer game "Snake" played on a spherical world. I hope to release it as a mobile game eventually. Until recently, however, the visuals left much to be desired.
+Our directive was to make something cool by writing our own shaders. I decided to overhaul the visuals of a game I had made previously.
 
 ## Media
 
@@ -22,6 +19,10 @@ Spherical Snake is a game I have been working on for the past few months in my s
 ![beauty shot 2](https://imgur.com/Afp9BcL.png)
 
 ![beauty shot 3](https://imgur.com/RQHX60J.png)
+
+## About
+
+Spherical Snake is a game I have been working on for the past few months in my spare time. It is a variant of the classic computer game "Snake" played on a spherical world. I hope to release it as a mobile game eventually. Until recently, however, the visuals left much to be desired.
 
 ## Reports
 
