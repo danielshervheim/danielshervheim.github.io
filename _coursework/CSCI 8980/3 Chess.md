@@ -11,7 +11,7 @@ A project for Dr. Stephen Guy's class **Game Engine Technologies**. My classmate
 Our directive was to create a game in the [provided game engine](/coursework/csci-8980/frustum-culling-in-opengl), using only Lua scripting. Additionally, our game had to demonstrate some form of animation. We chose to create a chess game.
 
 ## Media
-![beauty shot](/assets/img/cover_photos/chess3.png)
+![beauty shot](/assets/img/cover_photos/chess.png)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CiJlOMVO5M8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 > A video demonstrating the gameplay of our chess program.

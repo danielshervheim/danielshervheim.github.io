@@ -15,27 +15,13 @@ Our directive was to expand upon a topic we found interesting from earlier in th
 
 The radiance at point $p_a$ after travelling through a medium from point $p_b$ can be described with the following equation.
 
+<!-- $L(p_x)$ = the radiance at point $p_x$. -->
 
+<!-- $L(p_x, \omega)$ = the radiance at point $p_x$ from direction $\omega$. -->
 
-$L(p_x)$ = the radiance at point $p_x$.
+<!-- L(x, y) = the radiance at point x from point y after undergoing scattering through a medium. -->
 
-
-
-
-
-$L(p_x, \omega)$ = the radiance at point $p_x$ from direction $\omega$.
-
-
-
-
-
-L(x, y) = the radiance at point x from point y after undergoing scattering through a medium.
-
-
-
-Li(x, w) = the radiance at point x scattered into direction w
-
-= integral over all direction d (phase(w, d)*L(x, d)) dd
+<!-- Li(x, w) = the radiance at point x scattered into direction w = integral over all direction d (phase(w, d)*L(x, d)) dd -->
 
 
 
@@ -45,9 +31,9 @@ $L_i(p, v_{ab}) = \int_{\Omega} L(p, \omega)*F(\theta)d\omega$
 
 
 
+<!-- $\o_{xy} = | p_y - p_x |$ -->
 
 
-$\o_{xy} = | p_y - p_x |$
 
 The first term $T(p_a \leftrightarrow p_b)*L(p_b)$ describes the radiance from $p_b$ that reaches $p_a$ after enduring outscattering in the medium.
 
@@ -71,7 +57,7 @@ $\tau (p_a \leftrightarrow p_b) = \int_{p_a}^{p_b} \sigma_{t}(p)dp$
 
 
 
-> Note: the transmittance between two points is associative. That is, $T(p_a \rightarrow p_b) = T(p_a \leftarrow p_b)$. We denote the transmittance function input with $\leftrightarrow$  to show this. 
+> Note: the transmittance between two points is associative. That is, $T(p_a \rightarrow p_b) = T(p_a \leftarrow p_b)$. We denote the transmittance function input with $\leftrightarrow$  to show this.
 
 
 
