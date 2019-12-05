@@ -31,7 +31,7 @@ $L_i(p, v_{ab}) = \int_{\Omega} L(p, \omega)*F(\theta)d\omega$
 
 
 
-<!-- $\o_{xy} = | p_y - p_x |$ -->
+<!-- $\o_{xy} =  length(p_y - p_x) $ -->
 
 
 

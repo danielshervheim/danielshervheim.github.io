@@ -1,7 +1,7 @@
 ---
 title: Chess
 image: /assets/img/cover_photos/chess.png
-permalink: /coursework/csci-8980/project-3
+permalink: /coursework/csci-8980/chess
 ---
 
 # Chess
