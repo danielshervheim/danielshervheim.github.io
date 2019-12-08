@@ -1,5 +1,5 @@
 ---
-title: "Depth Informed Upsample"
+title: "Depth Informed Upsampling"
 image: /assets/img/placeholder.jpg
 ---
 
