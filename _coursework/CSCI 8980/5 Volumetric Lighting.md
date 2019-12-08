@@ -23,92 +23,113 @@ bla bla bla, below I give a brief word on the physical processes behind light tr
 
 ## Physical Background
 
-The reason we see the objects around us is because a photon has bounced off that object and into our eyes. Before it reaches our eyes, it can undergo any of the following events:
-
-1. Absorbtion. The photon is absorbed by a particle and converted into a different form of energy such as heat.
-2. Out-scattering. The photon hits a particle and bounces out of the path towards your eye.
-3. In-scattering. The photon hits a particle and bounces into the path towards your eye.
-
-Most real-time renderers neglect the effects of the medium on the light before it reaches your eyes. 
-
-TODO: More here??????
-
-![diagram](https://imgur.com/qtu6e3i.png)
-> Light that has bounced off of a box interacting with the surrounding medium before reaching the camera.
-
-The radiance at point $p_a$ after travelling through a medium from point $p_b$ can be described with the following equation.
+The simplest illumination model is that of light propogating in a vacuum. The light that bounces off of a surface is able to reach your eye unobstructed. In other words, radiance is constant between two points.
 
 
 
-$L(p_a) = L_{out} + L_{in}$
+In actuality, light often travels through a medium such as air or water before it reaches your eye. If the medium contains particles that interact with light, we call it a *"participating medium"*. Depending on the composition and concentration of the medium, any of the following events can occur:
+
+1. **Absorbtion**. The light is absorbed by a particle and converted into a different form of energy such as heat.
+2. **Out-scattering**. The light hits a particle and bounces out of the path towards your eye.
+3. **In-scattering**. The light hits a particle and bounces into the path towards your eye.
 
 
 
-Where $L_{out}$ is the radiance lost between $p_a$ and $p_b$ due to absorbtion and out-scattering, and $L_{in}$ is the radiance gained between $p_a$ and $p_b$ due to in-scattering.
+### Light Propogation in Participating Media
 
 
 
-### Equations for Light Lost ($L_{out}$)
+The light reaching your eye at point $p_a$ after travelling through a medium from a surface at point $p_b$ is described by following equation.
+
+
+
+---
+
+$L = L_{out} + L_{in}$
+
+---
+
+
+
+Where $L_{out}$ is the light lost between $p_a$ and $p_b$ due to absorbtion and out-scattering, and $L_{in}$ is the light gained between $p_a$ and $p_b$ due to in-scattering.
+
+
+
+### How Light is Lost
 
 TODO: add an image of only reduced radiance.
 ![reduced-radiance](???.png)
 > The above image, with only the reduced radiance visible.
 
-$L_{out}$, also called the *"reduced radiance"* describes how the light that bounced off the object towards your eye is lost before it reaches you. It is equal to the radiance at $p_b$ multiplied by the transmittance between $p_a$ and $p_b$. 
+
+
+$L_{out}$ describes the light lost due to absorbtion and out-scattering before it reaches your eye. It is defined as:
 
 
 
-$L_{out} = L(p_b) \times T(p_a, p_b)$
+---
+
+$L_{out} = I(p_b, -v) \times T(p_a, p_b)$
+
+---
 
 
 
-The transmittance describes how light is lost due to absorbtion and out-scattering between two points. It is defined as:
+$I$ Is the light at point $p_b$ travelling towards your eye from direction $-v = (p_a - p_b)$.
+
+$T$ is the transmittance, a measure of the original light at $p_b$ that reaches your eye at $p_a$ as a function of the distance travelled. It is defined as:
 
 
+
+---
 
 $T(p_a, p_b) = e^{-\int_{p_a}^{p_b}\sigma_e(p)dp}$
 
-
-
-Where $\sigma_{e}$ is the extinction coefficient, and is equal to the sum of the absorption coefficient $\sigma_{a}$ and the scattering coefficient $\sigma_{s}$.
-
-
-
-$\sigma_e(p) = \sigma_a(p) + \sigma_s(p)$
+---
 
 
 
-The absortion and scattering coefficients are properties inherent to the medium, and can vary spatially throughout the medium (hence the dependance on $p$).
+$\sigma_{e}$ is the extinction coefficient, equal to the sum of the absorption coefficients $\sigma_{a}$ and scattering coefficients $\sigma_{s}$. The absortion and scattering coefficients are properties inherent to the medium.
 
 
 
-### Equations for Light Gained ($L_{in}$)
+> Note that $0 \le T \le 1$. In other words, light is never gained due to absorbtion and/or out-scattering.
+
+
+
+### How Light is Gained
 
 TODO: add an image of only inscattered light.
 ![inscattered-light](???.png)
 > The above image, with only the inscattered light visible.
 
-The second term, $L_{in}$ describes the radiance gained due to in-scattering as the light travels through the medium.
+$L_{in}$ describes the light gained due to in-scattering between $p_a$ and $p_b$. It is defined as:
 
 
+
+---
 
 $L_{in} = \int_{p_a}^{p_b}T(p_a, p) \times \sigma_s(p) \times L_i(p, v) dp$
 
+---
 
 
-Where $L_i$ describes the incoming light at point $p$ scattered into the viewing ray $v = (p_{b} - p_{a})$.
+
+$L_i$ describes the light at point $p$ scattered into the viewing ray $v = (p_{b} - p_{a})$. It is defined as:
 
 
+
+---
 
 $L_i(p, v) = \int_{\Omega} I(p, \omega) \times F(v, \omega) d\omega$
 
+---
 
+$\Omega$ represents the sphere of directions centered over $p$.
 
-Where $\Omega$ represents the sphere of directions centered over $p$, $I(p, \omega)$ is the intensity of incoming light at $p$ from angle $\omega$, and $F$ is the phase function.
+$I$ is the light at $p$ travelling from direction $\omega$.
 
-
-
-The phase function is inherent to the medium and describes how much light is scattered into the viewing ray $v$ from the incoming light direction $\omega$. The [Henyey-Greenstein](https://www.astro.umd.edu/~jph/HG_note.pdf) phase function is commonly used in computer graphics. It takes a single asymmetry parameter $g = [-1, 1]$ which conveniently describes the amount of back-scattering vs. forward-scattering.
+$F$ is the phase function. It is inherent to the medium and describes the percentage of light from direction $\omega$ that is scattered into the viewing ray $v$.
 
 
 
