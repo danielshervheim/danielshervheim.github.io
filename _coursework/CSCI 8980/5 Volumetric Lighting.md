@@ -154,7 +154,10 @@ Geometry (like nvidia):
 
 TODO: walk through how to implement each of the above equations, and any "gotcha's" someone might encounter.
 
-## Source Code
+## Source Code / Credit
 
-The source code is available to download [here](https://drive.google.com/drive/folders/15e5d5eMOY7Mnlr6pb9vtDpczVOlYjQ4Q).
-
+- The source code is available to download [here](https://drive.google.com/drive/folders/15e5d5eMOY7Mnlr6pb9vtDpczVOlYjQ4Q).
+- I borrowed a ray-AABB intersection algorithm from [here](https://gamedev.stackexchange.com/questions/18436/most-efficient-aabb-vs-ray-collision-algorithms).
+- I followed a forum post from [here](https://forum.unity.com/threads/help-with-copying-shadow-map-and-putting-it-on-a-custom-shader.521189/) to access the shadow maps that Unity generates.
+- The 3D model of the Sponza Atrium is from Morgan McGuire's [Computer Graphics Archive](https://casual-effects.com/data/).
+- Finally, Wojciech Jarosz's [dissertation](https://cs.dartmouth.edu/~wjarosz/publications/dissertation/chapter4.pdf) on light transport in participating media was an invaluable resource.
