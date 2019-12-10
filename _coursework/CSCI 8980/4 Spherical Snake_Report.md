@@ -45,7 +45,7 @@ I only wanted to use the surface depth if there was a surface within the water s
 I also wanted to have a sharp ring of foam around anything within the water. I didn't want to create and manage dynamic foam-ring-meshes at run-time, so I went with a shader based approach. I reused the surface depth from earlier as a mask. If a pixel is "shallower" than a given threshold I consider it foam. The effect can break if the threshold is too high, or the viewing angle is too extreme, but on average it looks good enough for me.
 
 ![color](https://imgur.com/B4upoSA.png)
-> From left to right: 1) tinted blue by optical density, 2) tinted green uniformly, 3) foam added based on the surface depth.
+> From left to right: 1) tinted blue by transmittance, 2) tinted green uniformly, 3) foam added based on the surface depth.
 
 Vertex shader pseudocode:
 ```c
@@ -78,12 +78,12 @@ float surfaceDepth = depth - distToWater;
 float2 t = RaySphereIntersection(viewPosWS, viewDirWS, spherePosWS, sphereRadius);
 float volumeDepth = abs(t.x - t.y);
 
-// Calculate the optical density.
+// Calculate the optical depth and transmittance.
 float opticalDepth = min(surfaceDepth, volumeDepth);
-float opticalDensity = 1 - saturate(exp(-waterDensity * opticalDepth));
+float transmittance = 1 - saturate(exp(-waterDensity * opticalDepth));
 
 // Tint the color blue by the optical density.
-color *= lerp(float3(1,1,1), deepColor, opticalDensity);
+color *= lerp(float3(1,1,1), deepColor, transmittance);
 
 // Tint the color green uniformly.
 color *= shallowColor;

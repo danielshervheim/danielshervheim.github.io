@@ -184,7 +184,7 @@ for (int i = 0; i < STEPS; i++)
 {
   // How far along the ray we are, as a 0...1 percentage.
   float percent = i / (float)(STEPS-1.0);
-  
+
   // The current position along the ray.
   vec3 p = lerp(viewPos, fragPos, percent);
 }
@@ -217,8 +217,8 @@ for (int l = 0; l < LIGHTS.length; l++)
   // in shadow or not, from the perspective of the light l. This
   // is typically done by sampling the lights shadow map.
   vec3 curLi = GetLightVisibility(p, l) * LIGHTS[l].color;
-  
-    
+
+
   // The phase function relies on the angular difference
   // between the view direction and the light direction.
   // The Henyey-Greenstein phase function is commonly used
@@ -226,7 +226,7 @@ for (int l = 0; l < LIGHTS.length; l++)
   // media with a single parameter G = [-1, 1].
   float theta = acos(dot(viewDir, LIGHTS[l].dir));
   curLi *= HenyeyGreenstein(theta, G);
-  
+
   // Accumulate Li.
   Li += curLi;
 }
@@ -282,7 +282,7 @@ for (int i = 0; i < STEPS; i++)
   // Calculate the current position along the ray.
   float percent = i / (float)(STEPS-1.0);
   vec3 p = lerp(viewPos, fragPos, percent);
-  
+
   // Sample the coefficients at the current position.
   float absorbtion = GetAbsorbtionCoefficientAt(p);
   float scattering = GetScatteringCoefficientAt(p);
@@ -290,7 +290,7 @@ for (int i = 0; i < STEPS; i++)
 
   // Calculate the transmittance up to this point in the ray.
   float curTransmittance = exp(-opticalDepth);
-  
+
   // Calculate the inscattered light at the current position.
   vec3 Li = vec3(0.0, 0.0, 0.0);
   for (int l = 0; l < LIGHTS.length; l++)
@@ -300,7 +300,7 @@ for (int i = 0; i < STEPS; i++)
     curLi *= HenyeyGreenstein(theta, G);
     Li += curLi;
   }
-  
+
   // Integrate along the ray.
   opticalDepth += extinction * DP;
   inscatteredRadiance += curTransmittance * scattering * Li * DP;
@@ -323,6 +323,6 @@ return vec4(reducedRadiance + inscatteredRadiance, 1.0);
 
 - The source code is available to download [here](https://drive.google.com/drive/folders/15e5d5eMOY7Mnlr6pb9vtDpczVOlYjQ4Q).
 - I borrowed a ray-AABB intersection algorithm from [here](https://gamedev.stackexchange.com/questions/18436/most-efficient-aabb-vs-ray-collision-algorithms).
-- I followed a forum post from [here](https://forum.unity.com/threads/help-with-copying-shadow-map-and-putting-it-on-a-custom-shader.521189/) to access the shadow maps that Unity generates.
+- I used a set of free blue noise textures by [Christoph Peters](http://momentsingraphics.de/BlueNoise.html). 
 - The 3D model of the Sponza Atrium is from Morgan McGuire's [Computer Graphics Archive](https://casual-effects.com/data/).
 - Finally, Wojciech Jarosz's [dissertation](https://cs.dartmouth.edu/~wjarosz/publications/dissertation/chapter4.pdf) on light transport in participating media was an invaluable resource.
