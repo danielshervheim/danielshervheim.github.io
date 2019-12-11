@@ -1,6 +1,6 @@
 ---
 title: The Visuals of Spherical Snake
-permalink: /coursework/csci-8980/project-4/report
+permalink: /coursework/csci-8980/spherical-snake/report
 hide: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Spherical Snake
 image: /assets/img/cover_photos/spherical-snake.png
-permalink: /coursework/csci-8980/project-4
+permalink: /coursework/csci-8980/spherical-snake
 hide: true
 ---
 
