@@ -26,7 +26,7 @@ Spherical Snake is a game I have been working on for the past few months in my s
 
 ## Reports
 
-- [Report on the visuals](/coursework/csci-8980/project-4/report)
+- [Report on the visuals](/coursework/csci-8980/spherical-snake/report)
 
 ## Source Code
 
