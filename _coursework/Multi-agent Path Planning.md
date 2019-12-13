@@ -3,6 +3,7 @@ title: Multi-agent Path Planning
 image: /assets/img/cover_photos/flocking.png
 permalink: /coursework/csci-5611/multi-agent-path-planning
 mathjax: true
+hide: true
 ---
 
 # Multi-agent Path Planning
