@@ -11,10 +11,15 @@ A project for Dr. Stephen Guy's class **Game Engine Technologies**.
 
 Our directive was to expand upon a topic we found interesting from earlier in the course. I chose to explore real-time volumetric lighting.
 
+Below I give a brief explanation of the math that governs how light behaves in a participating medium. I also discuss my own implementation in a game engine, and provide platform-agnostic pseudo-code.
+
 ## Media
 
+![cover image](/assets/img/volumetric-lighting/cover-bw.jpg)
+> A black and white image of my implementation.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lEUu0IehhOs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-> Sunlight filtering into the Sponza atrium.
+> A directional light moving through the Sponza atrium.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/h3GW8Afwd4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 > A point light moving through the Sponza atrium at night.
@@ -22,62 +27,50 @@ Our directive was to expand upon a topic we found interesting from earlier in th
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WUtQPJMQpU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 > A spot light moving through the Sponza atrium at night.
 
-## 1. About
+## 1. Light Propagation in Participating Media
 
-For the final project I wanted to explore volumetric rendering. Specifically, the behavior of light in a participating medium.
+Before light reaches your eye, it interacts with particles suspended in the air. Because the particles in the air alter the trajectory of the light that passes through them, we call the air a *"participating medium"*.
 
-Below I give a brief overview of the math that governs the behavior of light in a participating medium. If you are familiar with the math already, then feel free to skip that section.
+Depending on the composition of the medium (and the concentration of the particles within it), any of the following events could occur and alter the light before it reaches your eye.
 
-I then describe how I implemented the equations in an existing engine. Finally, I give an implementation of the equations in platform agnostic pseudo-code.
-
-## 2. Physical Background
-
-The simplest illumination model is that of light propagating in a vacuum. The light that bounces off of a surface is able to reach your eye unobstructed. In other words, radiance is constant between two points.
+- **Absorption**: light could be absorbed by a particle and converted into a different form of energy such as heat.
+- **Out-scattering**: light could hit a particle and bounce in a different direction away from your eye.
+- **In-scattering**: light from a different direction could hit a particle and bounce towards your eye. 
 
 
 
-In actuality, light often travels through a medium such as air or water before it reaches your eye. If the medium contains particles that interact with light, we call it a *"participating medium"*. Depending on the composition and concentration of the medium, any of the following events can occur:
-
-- **Absorption**. The light is absorbed by a particle and converted into a different form of energy such as heat.
-- **Out-scattering**. The light hits a particle and bounces out of the path towards your eye.
-- **In-scattering**. The light hits a particle and bounces into the path towards your eye.
-
-
-
-### 2.1 Light Propagation in Participating Media
+### 1.1 Light Propagation in Participating Media
 
 ![volumetric lighting](/assets/img/volumetric-lighting/combined.png)
-> Light that has reached the camera after undergoing scattering events in a dense medium.
+> Light interacts with the air before it reaches your eye.
 
-The light reaching your eye at point $p_a$ after traveling through a medium from a surface at point $p_b$ is described by following equation.
-
-
-
-$L = L_{out} + L_{in}$
+The light reaching your eye at point $p_a$ after traveling through a medium from point $p_b$ is described by the following equation:
 
 
 
-Where $L_{out}$ is the light lost between $p_a$ and $p_b$ due to absorption and out-scattering, and $L_{in}$ is the light gained between $p_a$ and $p_b$ due to in-scattering.
+$L = L_{reduced} + L_{inscattered}$
 
 
-### 2.2 How Light is Lost
+
+Where $L_{reduced}$ is the light lost between $p_a$ and $p_b$ due to absorption and out-scattering, and $L_{inscattered}$ is the light gained between $p_a$ and $p_b$ due to in-scattering.
+
+
+### 1.2 Reduced Radiance
 
 ![reduced radiance](/assets/img/volumetric-lighting/reduced radiance.png)
-> The above image, with only the reduced light visible (no in-scattered light).
+> The above image, with only the reduced radiance visible. Notice that the further back the scene goes, the darker the image gets. As the distance increases, so too does the probability that light will be absorbed or out-scattered.
 
 
 
-$L_{out}$ describes the light lost due to absorption and out-scattering before it reaches your eye. It is defined as:
+As light travels to your eye in a participating medium, a portion of it will be lost due to absorption and out-scattering. We call the light that reaches your eye the *"reduced radiance"*. The reduced radiance is defined as:
 
 
 
-$L_{out} = I(p_b, -v) \times T(p_a, p_b)$
+$L_{reduced} = I(p_b, -v) \times T(p_a, p_b)$
 
 
 
-$I$ Is the light at point $p_b$ traveling towards your eye from direction $-v = (p_a - p_b)$.
-
-$T$ is the transmittance, a measure of the original light at $p_b$ that reaches your eye at $p_a$ as a function of the distance travelled. It is defined as:
+Where $I$ Is the original light at point $p_b$ traveling towards your eye (opposite the view ray) in direction $-v = -(p_b - p_a)$, and $T$ is the transmittance (a measure of the original light that reaches your eye as a function of the distance travelled). The transmittance between two points is defined as:
 
 
 
@@ -85,28 +78,30 @@ $T(p_a, p_b) = e^{-\int_{p_a}^{p_b}\sigma_e(p)dp}$
 
 
 
-$\sigma_{e}$ is the extinction coefficient, equal to the sum of the absorption coefficients $\sigma_{a}$ and scattering coefficients $\sigma_{s}$. The absorption and scattering coefficients are properties inherent to the medium.
+Where $\sigma_{e} = \sigma_{a} + \sigma_{s}$ is the extinction coefficient, equal to the sum of the absorption coefficient $\sigma_{a}$ and scattering coefficient $\sigma_{s}$. The absorption and scattering coefficients are properties inherent to the medium, and roughly describe the probability of an absorbtion and/or scattering event occuring.
 
 
 
-> Note that $0 \le T \le 1$. In other words, light is never gained due to absorption and/or out-scattering.
+It is worth noting that the integral portion of the transmittance equation is sometimes refered to as the *"optical depth"*.
 
 
 
-### 2.3 How Light is Gained
+### 1.3 In-scattering
 
 ![inscattered radiance](/assets/img/volumetric-lighting/inscattered radiance.png)
-> The above image, with only the in-scattered light visible (no attenuated light).
-
-$L_{in}$ describes the light gained due to in-scattering between $p_a$ and $p_b$. It is defined as:
+> The above image, with only the in-scattered light visible.
 
 
 
-$L_{in} = \int_{p_a}^{p_b}T(p_a, p) \times \sigma_s(p) \times L_i(p, v) dp$
+Light that might not have been travelling towards you in a medium may hit a particle and change its course towards your eye. The accumulation of these rogue light rays is responsible for the "[god ray](https://en.wikipedia.org/wiki/Sunbeam)" effect. The in-scattered light is defined as:
 
 
 
-$L_i$ describes the light at point $p$ scattered into the viewing ray $v = (p_{b} - p_{a})$. It is defined as:
+$L_{inscattered} = \int_{p_a}^{p_b}T(p_a, p) \times \sigma_s(p) \times L_i(p, v) dp$
+
+
+
+Where $L_i$ describes the light at point $p$ scattered into the view ray $v = p_{b} - p_{a}$. It is defined as:
 
 
 
@@ -114,32 +109,52 @@ $L_i(p, v) = \int_{\Omega} I(p, \omega) \times F(v, \omega) d\omega$
 
 
 
-$\Omega$ represents the sphere of directions centered over $p$.
-
-$I$ is the light at $p$ traveling from direction $\omega$.
-
-$F$ is the phase function. It is inherent to the medium and describes the percentage of light from direction $\omega$ that is scattered into the viewing ray $v$.
+And where $\Omega$ represents the sphere of all possible directions, $I$ is the light at $p$ traveling from direction $\omega$, and $F$ is the phase function. The phase function is inherent to the medium, and describes the probability of light from a given direction scattering into the viewing ray $v$.
 
 
 
-## 3. Implementation Details
+## 2. Implementation Details
 
-### 3.1 My Approach
+I integrated my implementation in the [Unity](https://unity.com/) engine.
 
-I implemented my approach in the Unity engine. My first attempt was a full-screen quad image-effect shader, rendered after the transparent pass. For each fragment, I sampled the depth buffer and reconstructed the world position. I then traced rays from the camera to the fragment, and integrated the above equations along the ray.
 
-That worked very well, and was relatively easy to implement. Unfortunately, there were some major limitations. To my knowledge, Unity only provides information about non-directional (point and spot) lights at certain periods during the rendering pipeline. By the time my full-screen image effect shader was running, that information had been lost. So with this approach, I was unable to support point lights, spot lights, and light probes.
 
-Additionally, ray-tracing proved to be very expensive. I ended up performing the ray-tracing on a quarter resolution texture, and up-sampling back into full resolution. I also reduced the amount of samples that I took along the ray from 128 (which provided nearly perfect visual quality) to 32. This introduced severe banding artifacts. To mitigate these artifacts, I offset each ray by a random amount every frame. This helped hide the banding, but also introduced noise. Thankfully, the temporal anti-aliasing system in Unity was able to smooth the noise out relatively well.
+### 2.1 My Approach
+
+My initial idea was to render a full-screen quad, and perform the volumetric lighting calculations in screen-space. For each fragment, I sampled the depth buffer to reconstruct the world-space position. I then traced a ray from the camera to that position, and integrated the above equations along the ray.
+
+
+
+That worked well, and was relatively easy to implement. Unfortunately, I quickly discovered some major limitations. To my current knowledge, Unity only provides lighting information for point and spot lights during certain passes in the rendering pipeline. By the time my screen-space shader ran, I was unable to access any meaningful point or spot light data.
+
+
+
+Additionally, tracing rays proved to be more expensive than I initially thought. Even at a quarter resolution, the performance was still sluggish. I was forced to reduce the amount of samples along the ray from 128 (which provided almost perfect visual quality) to 32. This introduced unacceptable visual artifacts in the form of banding.
+
+
+
+To alleviate the banding, I offset the start position of each ray by a different random, tiny amount each frame. The banding was eliminated, at the expense of noise. This was still a preferable trade-off, since Unity's temporal anti-aliasing system was able to smooth out the noise rather welll.
+
+
 
 ![banding](/assets/img/volumetric-lighting/banding.png)
-> Severe banding artifacts (L), reduced artifacts due to random ray offsets (R).
+> Banding artifacts due to insufficiently low samples  (left). Reduced banding artifacts by offsetting each ray by a random amount (right).
 
-Unfortunately that still didn't solve the problem of not being able to access the point and spotlight data. For that, I turned to another approach. I re-implemented my shader as a standard shader (rather than an image effect shader) and applied it to a cuboid in the scene. This allowed me to receive information about all the lights. Unfortunately, because it was applied to a physical mesh in the scene (rather than a full-screen image effect) I could not move the camera inside of the volume or the effect would break. Likewise, because it was not a screen-space effect I could not downsample and compute the in-scattered light, so the performance was much worse than my initial attempt.
 
-In the future, I would like to experiment more to try and find a way to access all of the lights in a single screen-space shader pass. Integrating my implementation with the Unity engine was not difficult, per-se, but I did feel at times as though I was fighting the engine. I think it would be interesting to write my own engine, so I had more control over what was rendered and when, and to try and integrate volumetric lighting there.
 
-### 3.2 Pseudocode
+Unfortunately, I still wasn't able to access the point and spot light data so I turned to a different approach.
+
+
+
+I re-wrote my screen-space shader as a regular shader and applied it to a cube mesh. Because it was attached to a mesh, the shader executed with rest of the meshes and the lighting information was correctly set. I also enabled front-face culling, so that the viewer could still appear to go inside the "volume" mesh. Because this approach was not done in screen-space I was unable to perform the volumetric lighting calculations at a downsampled resolution so the performance was much worse than my initial attempt.
+
+
+
+Integrating my implementation in Unity was an interesting experience. At times I definitely felt as though I was fighting the engine. It made me curious to write my own engine. That way I could have full control over what lighting information was generated, and when.
+
+
+
+### 2.2 Pseudocode
 
 I will attempt to keep the pseudocode below implementation agnostic, although I will assume that you have certain buffers available to you (depth, color, and world position).
 
@@ -260,7 +275,7 @@ return vec4(reducedRadiance + inscatteredRadiance, 1.0);
 
 
 
-## 4. Source Code / Credit
+## 3. Source Code / Credit
 
 - The source code is available to download [here](https://drive.google.com/drive/folders/15e5d5eMOY7Mnlr6pb9vtDpczVOlYjQ4Q).
 - I borrowed a ray-AABB intersection algorithm from [here](https://gamedev.stackexchange.com/questions/18436/most-efficient-aabb-vs-ray-collision-algorithms).
