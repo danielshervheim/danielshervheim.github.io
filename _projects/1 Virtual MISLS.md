@@ -10,7 +10,7 @@ A virtual reality tour of the *Military Intelligence Service Language School* (M
 
 During World War II, the MISLS trained soldiers in the Japanese language to aid the war effort. Since then, many of buildings have fallen into disrepair. We at [AISOS](http://aisos.umn.edu/) created this virtual reality tour to enable people to immerse themselves in a part of history that is often under-represented at Fort Snelling.
 
-I worked on the following aspects of the project:
+I worked on the following aspects:
 - Cleaning and UV unwrapping the photogrammetry meshes in Blender.
 - Assembling the scene, images, text, and audio in Unity.
 - Programming the movement, map, and audio systems in Unity.
