@@ -3,7 +3,7 @@ title: About
 permalink: /about
 layout: page
 ---
-![me](/assets/img/about/me.jpg)
+![me](/assets/img/about/me_new.JPG)
 
 <br/>
 
