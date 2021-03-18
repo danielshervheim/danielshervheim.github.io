@@ -18,8 +18,8 @@ A collection of stylized sky, sand, and water shaders I wrote for [Unity](https:
 
 ## Download
 
-The source code is available on Github, along with pre-packaged `.unitypackage` files.
+The source code is available on Github, along with installation instructions via the Unity package manager (UPM).
 
 | Sky | Sand | Water |
 | --- | ---- | ----- |
-| [github](https://github.com/danielshervheim/Stylized-Sky){:target="_blank"}, [unitypackage](https://drive.google.com/open?id=1Qc0tf0EiDyUaPCWwh9_ZGF7NBFhNGfrr){:target="_blank"} | [github](https://github.com/danielshervheim/Stylized-Sand){:target="_blank"}, [unitypackage](https://drive.google.com/open?id=1Lc6xgKN8GqlIeGeB0WAsAycON4rkA2Eg){:target="_blank"} | [github](https://github.com/danielshervheim/Stylized-Water){:target="_blank"}, [unitypackage](https://drive.google.com/open?id=1eYB-i1B2t8J9SR6_nryY3YpGiGqrutJ4){:target="_blank"} |
+| [github](https://github.com/danielshervheim/Stylized-Sky){:target="_blank"} | [github](https://github.com/danielshervheim/Stylized-Sand){:target="_blank"} | [github](https://github.com/danielshervheim/Stylized-Water){:target="_blank"} |
