@@ -1,0 +1,21 @@
+.slide-fade-enter-active,
+.slide-fade-leave-active
+{
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to
+{
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+/* Allows for list animation when adding/removing elements */
+.slide-fade-move
+{
+  transition: all 0.25s ease;
+}
