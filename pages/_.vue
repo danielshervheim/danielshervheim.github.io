@@ -2,7 +2,7 @@
   <article
     class="page"
   >
-    <nuxt-content :document="doc" />
+    <nuxt-content v-if="doc" :document="doc" />
   </article>
 </template>
 
