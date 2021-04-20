@@ -1,7 +1,5 @@
 <template>
-  <Error v-if="!doc" />
   <article
-    v-else
     class="page"
   >
     <nuxt-content :document="doc" />
@@ -9,28 +7,20 @@
 </template>
 
 <script>
-import Error from '../components/Error'
-
 export default {
-  components: {
-    Error
-  },
-  transition: {
-    name: 'slide-fade',
-    mode: 'out-in'
-  },
-  async asyncData ({ $content, params }) {
+  async asyncData ({ $content, params, error }) {
     const path = `/${params.pathMatch || 'index'}`
     const docs = await $content({ deep: true }).where({ path }).fetch()
-    try {
+    if (docs.length >= 1 && docs[0]) {
       return {
         doc: docs[0]
       }
-    } catch (err) {
-      return {
-        doc: null
-      }
     }
+
+    return error({
+      statusCode: 404,
+      message: "There's nothing here."
+    })
   }
 }
 </script>

@@ -78,5 +78,21 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  // Transitions: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-transition/
+  layoutTransition: {
+    name: 'slide-fade',
+    mode: 'out-in'
+  },
+
+  pageTransition: {
+    name: 'slide-fade',
+    mode: 'out-in'
+  },
+
+  generate: {
+    // False, since we define our own 404.html that github pages will use.
+    fallback: false
   }
 }
