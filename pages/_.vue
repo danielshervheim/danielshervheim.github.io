@@ -17,6 +17,7 @@ export default {
       }
     }
 
+    console.log('nothing here')
     redirect('/404')
     // return error({
     //   statusCode: 404,

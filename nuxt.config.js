@@ -3,7 +3,7 @@ export default {
   target: 'static',
 
   // SSR: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-ssr
-  ssr: true,
+  ssr: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -40,7 +40,7 @@ export default {
   plugins: [
     {
       src: '~/plugins/vue-masonry-css.js',
-      ssr: true
+      ssr: false
     }
   ],
 

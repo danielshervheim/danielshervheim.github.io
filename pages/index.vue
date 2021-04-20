@@ -14,6 +14,13 @@
     <TileContainer
       :tileData="coursework"
     /> -->
+
+    <!-- Required to force Nuxt to generate routes for them. -->
+    <ul hidden>
+      <li v-for="page in allPages" :key="page.path">
+        <a :href="page.path">{{page.path}}</a>
+      </li>
+    </ul>
   </div>
 </template>
 
