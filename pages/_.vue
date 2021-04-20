@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  async asyncData ({ $content, params, error }) {
+  async asyncData ({ $content, params, redirect }) {
     const path = `/${params.pathMatch || 'index'}`
     const docs = await $content({ deep: true }).where({ path }).fetch()
     if (docs.length >= 1 && docs[0]) {
@@ -17,10 +17,11 @@ export default {
       }
     }
 
-    return error({
-      statusCode: 404,
-      message: "There's nothing here."
-    })
+    redirect('/404')
+    // return error({
+    //   statusCode: 404,
+    //   message: "There's nothing here."
+    // })
   }
 }
 </script>
