@@ -1,16 +1,16 @@
 <template>
   <div
     class="tile"
-    :class="{ 'overlay': overlayCaption }"
+    :class="{ 'overlay': overlayTitle }"
   >
     <NuxtLink
       :to="path"
+      class="image-container"
     >
-      <img
-        :src="src"
-        class="image"
-        :alt="title"
-      >
+        <img
+          :src="src"
+          :alt="title"
+        />
     </NuxtLink>
     <NuxtLink
       :to="path"
@@ -41,7 +41,7 @@ export default {
       type: String,
       required: true
     },
-    overlayCaption: {
+    overlayTitle: {
       type: Boolean,
       required: false,
       default: false

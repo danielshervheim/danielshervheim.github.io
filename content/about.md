@@ -3,7 +3,7 @@ title: About
 permalink: /about
 ---
 
-![me](/assets/img/about/me.jpg)
+![Daniel Shervheim](/assets/img/about/me.jpg)
 
 <br/>
 

@@ -13,7 +13,7 @@
         :src="tile.image"
         :title="tile.title"
         :path="tile.path"
-        :overlay-caption="true"
+        :overlay-title="true"
       />
     </masonry>
   </div>

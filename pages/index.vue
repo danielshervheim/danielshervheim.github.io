@@ -4,17 +4,7 @@
     <TileContainer
       :tile-data="projects.concat(coursework)"
     />
-
-    <!-- <h2 class="category-title">Projects</h2>
-    <TileContainer
-      :tileData="projects"
-    />
-
-    <h2 class="category-title">Coursework</h2>
-    <TileContainer
-      :tileData="coursework"
-    /> -->
-
+    
     <!-- Required to force Nuxt to generate routes for them. -->
     <ul hidden>
       <li v-for="page in allPages" :key="page.path">
@@ -72,9 +62,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-  /* .category-title {
-    text-align: center;
-  } */
-</style>
