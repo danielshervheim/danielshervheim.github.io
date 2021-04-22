@@ -52,6 +52,17 @@ export default {
     color: #0365d6;
   }
 
+  /* Dark mode fixes. */
+  @media (prefers-color-scheme: dark) {
+    .header {
+      border-bottom: 1px solid #22262c;
+    }
+
+    .title a {
+      color: #cad1d8;
+    }
+  }
+
   .title h1 {
     border-bottom: none;
     padding-bottom: 0px;

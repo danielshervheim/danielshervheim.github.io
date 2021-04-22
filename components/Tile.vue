@@ -91,6 +91,12 @@ export default {
     background-color: rgba(0,0,0,0.666);
   }
 
+  /* @media (prefers-color-scheme: dark) {
+    .overlay:hover .caption-container {
+      background-color: #0365d6bd
+    }
+  } */
+
   .overlay .caption {
     display: block;
     margin-top: 0px;

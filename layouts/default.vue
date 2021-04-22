@@ -1,5 +1,5 @@
 <template>
-  <div class="app markdown-body">
+  <div class="app">
     <Header />
     <main
       class="content"
@@ -21,6 +21,13 @@ export default {
     name: 'slide-fade',
     mode: 'out-in',
     appear: true
+  },
+  head () {
+    return {
+      bodyAttrs: {
+        class: 'markdown-body'
+      }
+    }
   }
 }
 </script>

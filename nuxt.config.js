@@ -31,7 +31,8 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/node_modules/destyle.css/destyle.css',
-    '~/node_modules/github-markdown-css/github-markdown.css',
+    // '~/node_modules/github-markdown-css/github-markdown.css',
+    '~/assets/github-markdown.css',
     '~/assets/slide-fade.css',
     '~/assets/styles.css'
   ],
