@@ -1,5 +1,15 @@
 # dss
 
+## Reminder
+
+To deploy, run
+
+```bash
+npm run build
+npm run generate
+npm run deploy
+```
+
 ## Build Setup
 
 ```bash
