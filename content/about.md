@@ -13,9 +13,9 @@ I'm Dan!
 
 I'm interested in technology and art, which has led me to study computer graphics.
 
-I graduated in December 2019 with a B.S. in computer science. I am currently pursuing an M.S. in computer science at the University of Minnesota.
+I graduated in January 2022 with an M.S. in computer science from the University of Minnesota. During my time there, I worked as a computer science teaching assistant and at [AISOS](http://aisos.umn.edu/), where I helped build informative digital experiences.
 
-I also work as a computer science teaching assistant and at [AISOS](http://aisos.umn.edu/), where I help build informative digital experiences.
+I currently work at Apple as a graphics engineer.
 
 In my spare time I like to read, draw, play games, listen to podcasts, and spend time with my friends and family.
 
