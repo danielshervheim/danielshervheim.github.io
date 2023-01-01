@@ -19,7 +19,7 @@ I currently work at Apple as a graphics engineer.
 
 In my spare time I like to read, draw, play games, listen to podcasts, and spend time with my friends and family.
 
-My resume is available [here](https://docs.google.com/document/d/1pAoeWMVmRG-uOplchmDD8qh1SfPuwfCJ26882EFppic/edit?usp=sharing).
+My resume is available [here](https://docs.google.com/document/d/15qzsC1fZBmPHVkkWohMgnye5y0L1zPw6r998nnW5ZO0/edit?usp=sharing).
 
 <br/>
 
