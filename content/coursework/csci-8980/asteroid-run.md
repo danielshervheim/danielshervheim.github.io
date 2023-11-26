@@ -15,7 +15,7 @@ Our directive was to create a simple game in [Processing](https://processing.org
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u62XxwUIDcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-![screenshot](https://imgur.com/t9RPU0Z.png)
+![screenshot](/assets/img/asteroid-run/t9RPU0Z.png)
 
 ## About
 
@@ -38,7 +38,7 @@ I would also like to improve the sound design of the game. Currently there are s
 
 Finally, I would like to add more visual effects such as a bloom around the ship's boosters, textures on the asteroids, and improved flame trails.
 
-![concept art](https://imgur.com/XxCmDtH.png)
+![concept art](/assets/img/asteroid-run/XxCmDtH.png)
 
 > Concept art, how I wanted the game to look ideally.
 
@@ -118,7 +118,7 @@ return Collision.None;
 
 The downside is that the scene must be rendered *almost* twice (in the collision texture, only the asteroids, fuel cells, and ship need to be rendered. No special effects are required).
 
-![collision texture](https://imgur.com/f7OxvUc.png)
+![collision texture](/assets/img/asteroid-run/f7OxvUc.png)
 
 > Example of a collision texture.
 
@@ -148,7 +148,7 @@ My game has 3 states: MAINMENU, PLAY, GAMEOVER. I made an enum to keep track of 
 
 In each state, there are a series of checks to determine if the game state should change. For instance, in the MAINMENU state, we can only change to the PLAY state if the play button was pressed.
 
-![state machine](https://imgur.com/zvNqF1C.png)
+![state machine](/assets/img/asteroid-run/zvNqF1C.png)
 
 > Graph of the game state flow.
 

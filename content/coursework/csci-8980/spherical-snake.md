@@ -16,11 +16,11 @@ Our directive was to make something cool by writing our own shaders. I decided t
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qCyZzmVQuRI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-![beauty shot 1](https://imgur.com/lQhoKTt.png)
+![beauty shot 1](/assets/img/spherical-snake/lQhoKTt.png)
 
-![beauty shot 2](https://imgur.com/Afp9BcL.png)
+![beauty shot 2](/assets/img/spherical-snake/Afp9BcL.png)
 
-![beauty shot 3](https://imgur.com/RQHX60J.png)
+![beauty shot 3](/assets/img/spherical-snake/RQHX60J.png)
 
 ## About
 

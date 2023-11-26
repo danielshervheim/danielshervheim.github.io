@@ -18,7 +18,7 @@ I had been working on Spherical Snake for a while, but never put much effort int
 
 I wanted the game to look stylized, yet physically plausible. I was inspired by games like [Super Mario Galaxy](https://www.youtube.com/watch?v=UrF6YW5W998), [Rime](https://www.youtube.com/watch?v=biPr3V7-IXI), and [Abzu](https://www.youtube.com/watch?v=bpvHqAsNVH0) as well as the work of [Oskar Stålberg](https://oskarstalberg.tumblr.com/post/136461533291/polygonal-planet-project-a-study-in-tilesets-by). In the end, I decided on a beach theme and drew up a concept of how I wanted it to look.
 
-![concept art](https://imgur.com/ukle427.png)
+![concept art](/assets/img/spherical-snake/ukle427.png)
 
 > Concept art for how I wanted the game to look ideally.
 
@@ -38,15 +38,15 @@ I then calculated the "surface depth". That is, the length of the view ray from 
 
 I only wanted to use the surface depth if there was a surface within the water sphere. If the surface depth was greater than the volume depth, then I knew the view ray exited the water sphere before hitting a surface. For an accurate optical depth, I took the minimum of both the surface depth and volume depth. The figure below illustrates why this is both necessary and sufficient.
 
-![figure](https://imgur.com/MruqcR9.png)
+![figure](/assets/img/spherical-snake/MruqcR9.png)
 > The red lines represent the surface depth, and the blue lines represent the volume depth.
 
-![depth](https://imgur.com/tB4de8r.png)
+![depth](/assets/img/spherical-snake/tB4de8r.png)
 > From left to right: 1) volume depth, 2) surface depth, 3)  optical depth (minimum of both).
 
 I also wanted to have a sharp ring of foam around anything within the water. I didn't want to create and manage dynamic foam-ring-meshes at run-time, so I went with a shader based approach. I reused the surface depth from earlier as a mask. If a pixel is "shallower" than a given threshold I consider it foam. The effect can break if the threshold is too high, or the viewing angle is too extreme, but on average it looks good enough for me.
 
-![color](https://imgur.com/B4upoSA.png)
+![color](/assets/img/spherical-snake/B4upoSA.png)
 > From left to right: 1) tinted blue by transmittance, 2) tinted green uniformly, 3) foam added based on the surface depth.
 
 Vertex shader pseudocode:
@@ -106,7 +106,7 @@ I wanted the clouds to appear stylized to match the overall aesthetic of the res
 
 The basic idea is that the vertices of a sphere are displaced along their normals to achieve a cloud-ish shape. Then they are colored by the standard Lambertian diffuse equation. I then generate two masks to use as the pixels alpha value. The first mask is based on the fresnel effect, to "feather" the edges of the clouds. The second mask is based on the view direction to fade out clouds near the camera, which prevents them from blocking the player's view of the game.
 
-![cloud](https://imgur.com/XyETQXl.png)
+![cloud](/assets/img/spherical-snake/XyETQXl.png)
 > From left to right: 1) the Fresnel mask, 2) the view direction mask, 3) only the color, 4) the color and alpha combined.
 
 The vertex shader is essentially identical to the water shader but without the offset by time.
@@ -139,10 +139,10 @@ My initial idea for the snake was based on statues I had seen of the Mesoamerica
 
 I wanted the snake to be easy to read in motion, but not boring and flat. I ended up using a gradient based on the snake models texture coordinates.
 
-![uv unwrap](https://imgur.com/z3Bj3kQ.png)
+![uv unwrap](/assets/img/spherical-snake/z3Bj3kQ.png)
 > I unwrapped the model such that all +Y faces `texcoord.y > 1`, all -Y faces `texcoord.y < 0`, and for all other faces` 0 < texcoord.y < 1`.
 
-![snake](https://imgur.com/lQhoKTt.png)
+![snake](/assets/img/spherical-snake/lQhoKTt.png)
 > The model is shaded by interpolating two colors across it's `texcoord.y`.
 
 I then used a modified version of the Lambertian diffuse equation to generate a shadow mask. The gradient color is then tinted based on the mask by a shadow color parameter.

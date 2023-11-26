@@ -87,7 +87,7 @@ void draw(Prefab p)
 
 On average, I saw a 15-20 fps increase with the LOD system enabled.
 
-![lod example](https://imgur.com/7FpnalF.png)
+![lod example](/assets/img/frustum-culling/7FpnalF.png)
 
 > An example of the LOD system in action. The main camera is located to the right of the windmill, and the LOD system has swapped out the regular tree prefabs for low-poly versions (highlighted in red).
 
