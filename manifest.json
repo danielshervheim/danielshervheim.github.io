@@ -1,0 +1,17 @@
+{
+	"name": "Daniel Shervheim",
+  "lang": "en",
+	"short_name": "DS",
+	"start_url": "",
+	"display": "standalone",
+	"theme_color": "#2b5fdf",
+	"background_color": "#ffffff",
+	"icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "256",
+      "type": "png"
+    }
+  ],
+	"orientation": "portrait"
+}
