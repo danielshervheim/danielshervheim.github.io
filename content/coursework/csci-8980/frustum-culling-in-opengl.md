@@ -3,7 +3,7 @@ title: Frustum Culling
 image: /assets/img/frustum-culling/frustum-culling-edit.png
 permalink: /coursework/csci-8980/frustum-culling-in-opengl
 
-order: 5
+order: 12
 ---
 
 # Frustum Culling in OpenGL

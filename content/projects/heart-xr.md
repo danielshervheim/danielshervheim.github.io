@@ -1,7 +1,7 @@
 ---
 title: HeartXR
 image: /assets/img/heart-xr/splash.png
-order: -2
+order: 5
 ---
 
 # HeartXR

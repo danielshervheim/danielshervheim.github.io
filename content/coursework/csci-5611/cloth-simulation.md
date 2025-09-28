@@ -3,7 +3,7 @@ title: Cloth Simulation
 image: /assets/img/cloth-sim/cloth-sim.png
 permalink: /coursework/csci-5611/cloth-simulation
 
-order: 6
+order: 14
 ---
 
 # Cloth Simulation

@@ -3,7 +3,7 @@ title: Spherical Snake
 image: /assets/img/spherical-snake/spherical-snake.png
 permalink: /coursework/csci-8980/spherical-snake
 
-order: 3
+order: 10
 ---
 
 # Spherical Snake

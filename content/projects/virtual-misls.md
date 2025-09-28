@@ -1,7 +1,7 @@
 ---
 title: Virtual MISLS
 image: /assets/img/virtual-misls/hall2.png
-order: 1
+order: 9
 ---
 
 # Virtual MISLS

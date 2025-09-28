@@ -9,15 +9,13 @@ permalink: /about
 
 ## Hey there,
 
-I'm Dan!
+I'm Daniel!
 
-I'm interested in technology and art, which has led me to study computer graphics.
+I'm currently a designer at Apple.
 
-I graduated in January 2022 with an M.S. in computer science from the University of Minnesota. During my time there, I worked as a computer science teaching assistant and at [AISOS](http://aisos.umn.edu/), where I helped build informative digital experiences.
+Previously I studied computer science at the University of Minnesota and worked both as a CSCI teaching assistant, and in the [AISOS](http://aisos.umn.edu/) lab where I helped build informative digital experiences.
 
-I currently work at Apple as a graphics engineer.
-
-In my spare time I like to read, draw, play games, listen to podcasts, and spend time with my friends and family.
+In my spare time I like to read, listen to podcasts, explore the great outdoors, and spend time with my friends and family.
 
 My resume is available [here](https://docs.google.com/document/d/15qzsC1fZBmPHVkkWohMgnye5y0L1zPw6r998nnW5ZO0/edit?usp=sharing).
 
@@ -25,8 +23,12 @@ My resume is available [here](https://docs.google.com/document/d/15qzsC1fZBmPHVk
 
 ## Want to get in touch?
 
+<!--
+
 Find me on [Github](http://github.com/danielshervheim).
 
 Connect with me on [LinkedIn](https://www.linkedin.com/in/daniel-shervheim-106054178/).
+
+-->
 
 Email me at [danielshervheim@gmail.com](mailto:danielshervheim@gmail.com).

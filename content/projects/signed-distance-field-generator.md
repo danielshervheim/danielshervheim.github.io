@@ -1,7 +1,7 @@
 ---
 title: SDF Generator
 image: /assets/img/sdf/sdf.gif
-order: 5
+order: 8
 ---
 
 # Signed Distance Field Generator

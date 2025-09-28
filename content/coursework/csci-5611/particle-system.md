@@ -3,7 +3,7 @@ title: Particle System
 image: /assets/img/particle-system/particle-system.jpg
 permalink: /coursework/csci-5611/particle-system
 
-order: 7
+order: 11
 ---
 
 # Particle System

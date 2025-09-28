@@ -3,7 +3,7 @@ title: Fluid Simulation
 image: /assets/img/fluid-sim/fluid-sim.jpg
 permalink: /coursework/csci-5611/fluid-simulation
 
-order: 2
+order: 8
 ---
 
 # Fluid Simulation

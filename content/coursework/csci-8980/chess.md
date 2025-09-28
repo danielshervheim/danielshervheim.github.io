@@ -3,7 +3,7 @@ title: Chess
 image: /assets/img/chess/chess.png
 permalink: /coursework/csci-8980/chess
 
-order: 4
+order: 13
 ---
 
 # Chess

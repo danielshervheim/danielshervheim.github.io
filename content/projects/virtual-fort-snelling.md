@@ -1,7 +1,7 @@
 ---
 title: Virtual Fort Snelling
 image: /assets/img/virtual-fort-snelling/commanders-house-2021.png
-order: -3
+order: 6
 ---
 
 # Virtual Fort Snelling

@@ -3,8 +3,7 @@ title: Volumetric Lighting
 image: /assets/img/volumetric-lighting/cover-bw.jpg
 permalink: /coursework/csci-8980/volumetric-lighting
 mathjax: true
-
-order: 1
+order: 3
 ---
 
 # Volumetric Lighting

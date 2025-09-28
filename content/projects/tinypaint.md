@@ -1,7 +1,8 @@
 ---
 title: TinyPaint
 image: /assets/img/tinypaint/cover.png
-order: 6
+order: 15
+hide: false
 ---
 
 # TinyPaint

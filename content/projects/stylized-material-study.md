@@ -1,7 +1,7 @@
 ---
 title: Stylized Material Study
 image: /assets/img/stylized-material-study/all.png
-order: 3
+order: 4
 ---
 
 # Stylized Material Study

@@ -2,7 +2,7 @@
   <div class="index">
 
     <TileContainer
-      :tile-data="projects.concat(coursework)"
+      :tile-data="items"
     />
     
     <!-- Required to force Nuxt to generate routes for them. -->
@@ -57,6 +57,10 @@ export default {
     coursework: function () {
       return this.displayedPages
         .filter(p => p.path.startsWith('/coursework/'))
+        .sort((p1, p2) => (p1.order || this.displayedPages.length) - (p2.order || this.displayedPages.length))
+    },
+    items: function () {
+      return this.projects.concat(this.coursework)
         .sort((p1, p2) => (p1.order || this.displayedPages.length) - (p2.order || this.displayedPages.length))
     }
   }

@@ -2,6 +2,7 @@
 title: Other Worlds
 image: /assets/img/sayge/splash.png
 order: -1
+hide: true
 ---
 
 # Other Worlds
